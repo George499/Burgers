@@ -1,0 +1,68 @@
+.pagination__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    }
+    .pagination__display {
+      display: flex;
+      justify-content: center;
+      font-family: 'Roboto', sans-serif;
+      color: #656464;
+      font-size: 14px;
+      font-weight: 300;
+      margin-right: 18px;
+    }
+    .pagination__controll {
+        display: flex;
+        justify-content: center;
+    }
+    .pagination__controll-prev {
+    display: flex;
+    justify-content: center;
+    background-image: url(/images/vectorleft.png);
+    margin-right: 15px;
+    }
+    .pagination__controll-next {
+    background-image: url(/images/vectorright.png);
+    display: flex;
+    justify-content: center;
+    
+    }
+    
+    .pagination__pages {
+      display: flex;
+      justify-content: center;
+      margin-right: 15px;
+    }
+    .pagination__pages-item--active {
+      background-color: #27273e;
+      
+    }
+    .pagination__pages-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 25px;
+      height: 25px;
+      border-radius: 3px;
+      font-family: 'Roboto', sans-serif;
+      color: #221f1f;
+      font-size: 14px;
+      font-weight: 700;
+      text-align: center;
+    }
+    .pagination__link {
+    
+      color: #221f1f;
+      font-family: 'Roboto', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    
+    .pagination__link--active {
+    color: #ffffff;
+    color: #ec1e79;
+    }
+    

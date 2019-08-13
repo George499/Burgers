@@ -1,0 +1,12 @@
+@import url(/css/Comments/layout/base.css);
+@import url(/css/Comments/layout/fonts.css);
+@import url(/css/Comments/layout/normalize.css);
+@import url(/css/Comments/blocks/breadcrumbs.css);
+@import url(/css/Comments/blocks/contacts.css);
+@import url(/css/Comments/blocks/desc.css);
+@import url(/css/Comments/blocks/header.css);
+@import url(/css/Comments/blocks/logo.css);
+@import url(/css/Comments/blocks/nav.css);
+@import url(/css/Comments/blocks/pagination.css);
+@import url(/css/Comments/blocks/socials.css);
+@import url(/css/Comments/blocks/comments__section.css)
