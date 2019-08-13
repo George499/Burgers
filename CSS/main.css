@@ -1,6 +1,7 @@
-@import url(/css/Comments/layout/base.css);
-@import url(/css/Comments/layout/fonts.css);
-@import url(/css/Comments/layout/normalize.css);
+@import url(/CSS/layout/base.css);
+@import url(/fonts/stylesheet.css);
+@import url(/CSS/layout/normalize.css);
+
 @import url(/css/Comments/blocks/breadcrumbs.css);
 @import url(/css/Comments/blocks/contacts.css);
 @import url(/css/Comments/blocks/desc.css);
