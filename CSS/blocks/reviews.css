@@ -37,28 +37,28 @@
   filter: grayscale(100%); }
 
 .background--photo--1 {
-  background-image: url(/images/photos/photo1.png); }
+  background-image: url(../../images/photos/photo1.png); }
 
 .background--photo--2 {
-  background-image: url(/images/photos/photo2.png); }
+  background-image: url(../../images/photos/photo1.png); }
 
 .background--photo--3 {
-  background-image: url(/images/photos/photo3.png); }
+  background-image: url(../../images/photos/photo1.png); }
 
 .background--photo--4 {
-  background-image: url(/images/photos/photo4.png); }
+  background-image: url(../../images/photos/photo1.png); }
 
 .background--photo--5 {
-  background-image: url(/images/photos/photo5.png); }
+  background-image: url(../../images/photos/photo1.png); }
 
 .background--photo--6 {
-  background-image: url(/images/photos/photo6.png); }
+  background-image: url(../../images/photos/photo1.png); }
 
 .background--photo--7 {
-  background-image: url(/images/photos/photo7.png); }
+  background-image: url(../../images/photos/photo1.png); }
 
 .background--photo--8 {
-  background-image: url(/images/photos/photo8.png); }
+  background-image: url(../../images/photos/photo1.png); }
 
 .review__desc {
   position: absolute;
