@@ -1,3 +1,12 @@
+@import "variables";
+
+@import "layout/base";
+@import "layout/fonts";
+@import "layout/normalize"
+
+@import "blocks/first-screen"
+@import "blocks/we";
+
 @import url(CSS/layout/base.css);
 @import url(CSS/layout/fonts.css);
 @import url(CSS/layout/normalize.css);
@@ -12,3 +21,4 @@
 @import url(CSS/blocks/footer.css);
 @import url(CSS/blocks/map.css);
 @import url(CSS/blocks/we.css);
+
