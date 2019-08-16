@@ -1,7 +1,7 @@
 @charset "UTF-8";
 .first-screen {
   position: relative;
-  background: url(/images/first-bgrd.jpg);
+  background: url(../../images/first-bgrd.jpg);
   background-size: cover;
   background-size: 100%;
   height: 650px; }
