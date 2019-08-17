@@ -171,7 +171,7 @@
   padding-left: 44px; }
 
 .burger-decoration {
-  background: url(../../images/burger-decoration.png) no-repeat center center;
+  background: url(../images/burger-decoration.png) no-repeat center center;
   height: 241px;
   width: 451px;
   position: absolute;
@@ -221,7 +221,7 @@
 .scrolldown {
   width: 29px;
   height: 14px;
-  background: url(../../images/scrolldown.png) center center/contain no-repeat;
+  background: url(../images/scrolldown.png) center center/contain no-repeat;
   border: none;
   display: block;
   bottom: 20px;
