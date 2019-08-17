@@ -2,38 +2,56 @@ html, body {
   font-family: Ubuntu;
   height: 100%; }
 
+body {
+  font-size: 16px;
+  line-height: 1.42;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  color: #2f3234; }
+
 .wrapper {
+  position: relative;
   overflow: hidden;
-  min-width: 1100px;
+  width: 100%;
+  min-width: 940px;
   min-height: 100%;
+  overflow: hidden; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+  ul li {
+    list-style: none; }
+
+p {
+  padding: 0;
+  margin: 0; }
+
+footer {
+  position: relative;
+  width: 100%; }
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column; }
 
-.wrapper__content {
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1; }
-
-.maincontent {
-  margin: 0px auto;
-  height: 1432px; }
-
-.maincontent__container {
-  width: 1100px;
-  display: Flex;
-  margin: 0 auto; }
-
-.section__left {
-  margin-right: 75px; }
-
-ul {
-  list-style: none;
-  padding: 0; }
-
-ul > li {
-  list-style: none; }
-
-.li {
-  display: inline-block; }
+.section {
+  height: 100vh;
+  min-height: 650px; }

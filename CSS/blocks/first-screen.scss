@@ -1,4 +1,5 @@
 
+
 $yellow: #f9b43b;
 $flame: #e45028;
 $green: #2f3234;
@@ -23,23 +24,16 @@ line-height: $line-height;
 margin: $margin; 
 }
 
-.first-screen {
-    position: relative;
-    background: url(../../images/first-bgrd.jpg);
-    background-size: cover;
-    background-size: 100%;
-    height: 650px;     
+.mrburger {
+    background: url(../../images/first-bgrd.jpg) center center / cover no-repeat;
+
 }
-
-
-
-.container {    
-    display: flex;    
-    width: 943px;
-    justify-content: center;
+ 
+.header {
+    display: flex;
     align-items: center;
-    flex-direction: row;
-    margin-bottom: 95px;
+    justify-content: space-between;
+    padding-top: 13px;
 }
 .header__container {
     padding-top: 12px;       
@@ -47,12 +41,20 @@ margin: $margin;
     margin: 0 auto;
     align-items: center;
 }
-
-.first-screen__container {
-    
-    width: 943px;
-    height: 424px;
-    margin: 0 auto;
+.header__buttons {
+    display: flex;
+    flex-direction: row;
+}
+.mrburger__container {    
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.mrburger__content {
+    display: flex;
+    flex: 0.8;
+    align-items: center;
+    margin-bottom: 95px;
 }
 .logo {
     margin-right: 75px;
@@ -154,7 +156,7 @@ margin-right: 11px;
 }
 .burgers-desc {
     padding-top: 80px;
-    width: 40%;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;        
@@ -172,37 +174,48 @@ flex: 0 1 ;
     letter-spacing: -0.02em;
 }
 .scrolldown {
-    display: flex;
-    justify-content: center
+    width: 29px;
+    height: 14px;
+    background: url(../../images/scrolldown.png) center center / contain no-repeat;
+    border: none;
+    display: block;    
+    bottom: 20px;
+    align-self: center;
+    cursor: pointer;
+    
 }
 
-.dotmenu {
-    top: 90px;
-    right: 5px;
+
+.fixed-menu {
+position: fixed;
+top: 95px;
+right: 53px;
+}
+.fixed-menu__item {
+    &--current {
+        .fixed-menu__dot {
+            border: solid #fff 1px; 
+        }
+    }
+}
+
+.fixed-menu__dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: transparent;         
+    background-color: transparent;
+    margin-bottom: 3px;
+    position: relative;
+&:before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background: #fff;
+    border-radius: 50%;
     position: absolute;
-    float: right;
-    display: flex;
-    flex-direction: column;
-    height: 181px;
-    width: 16px
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-.dotmenu__list {
-    display: flex;
-    flex-direction: column;
-    height: 181px;
-    width: 16px
-}
-.dot__item {
-height: 6px;
-width: 6px;
-background-color: #ffffff;
-border-radius: 6px;
-margin-bottom: 16px;
-}
-.current {
-height: 16px;
-width: 16px;
-background-color: #ffffff;
-border: 1px solid #ffffff;
-border-radius: 16px;
 }
