@@ -660,7 +660,7 @@ template {
   min-height: 650px; }
 
 .we {
-  background: url(../../images/webckgrnd.png) center center/cover no-repeat;
+  background: url(../images/webckgrnd.png) center center/cover no-repeat;
   background-size: cover; }
 
 .we__container {
