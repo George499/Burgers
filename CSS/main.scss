@@ -2,14 +2,14 @@ $yellow: #f9b43b;
 $flame: #e45028;
 $green: #2f3234;
 
-@import "layout/base.css";
-@import "layout/fonts.css";
-@import "layout/normalize.css";
+@import "layout/base.scss";
+@import "layout/fonts.scss";
+@import "layout/normalize.scss";
 
-@import "blocks/first-screen.scss";
-@import "blocks/we.css";
-@import "blocks/reviews.css";
-@import "blocks/burgers.css";
-@import "blocks/btn.css";
+@import "blocks/mrburger.scss";
+@import "blocks/we.scss";
+@import "blocks/reviews.scss";
+@import "blocks/burgers.scss";
+@import "blocks/btn.scss";
 
 
