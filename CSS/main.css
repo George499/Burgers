@@ -7,7 +7,7 @@
 @import url(blocks/burgers.css);
 @import url(blocks/btn.css);
 .mrburger {
-  background: url(../../images/first-bgrd.jpg) center center/cover no-repeat; }
+  background: url(../images/first-bgrd.jpg) center center/cover no-repeat; }
 
 .header {
   display: -webkit-box;
