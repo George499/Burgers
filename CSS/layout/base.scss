@@ -15,6 +15,13 @@ body {
     position: relative;    
     color: $green;
 }
+.subtitle {
+    @include subtitle (24px, 500, 28px, $green, 0);
+    text-align: center;    
+}
+.text {
+    @include text(14px, 300, $green, 24px);  
+}
 
 .wrapper {
     position: relative;

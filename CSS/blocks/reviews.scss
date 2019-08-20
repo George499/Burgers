@@ -1,36 +1,4 @@
 
-$yellow: #f9b43b;
-$flame: #e45028;
-$green: #2f3234;
-
-@mixin title ($color, $fontsize, $lineheight, $margin) {
-font-family: 'Gagalin';
-font-size: $fontsize;
-text-align: left;
-text-transform: uppercase;
-line-height: $lineheight;
-color: $color;
-margin: $margin; 
-}
-@mixin subtitle ($font-size, $font-weight, $line-height, $color, $margin)  {
-font-family: 'Lifehack';
-font-size: $font-size; 
-font-weight: $font-weight;
-color: $color;
-text-align: left;
-letter-spacing: -0.02em;
-line-height: $line-height;
-margin: $margin; 
-}
-@mixin text ($font-size, $font-weight, $color, $line-height) {
-font-family: 'Ubuntu';
-font-size: $font-size;
-font-weight: $font-weight;
-color: $color;
-text-align: center;
-line-height: $line-height
-
-}
 
 .section {
     height: 100vh;
@@ -75,11 +43,10 @@ line-height: $line-height
     @include title (#fff, 14px, 28px, 0);
     margin-bottom: 30px;
 }
-.reviews__text {
-    @include text(13px, 500, 30px, #fff);
-    
+.text--reviews {   
     text-align: start;
     margin-bottom: 19px;
+    color: #fff;
 }
 
 
