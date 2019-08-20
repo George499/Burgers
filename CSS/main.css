@@ -821,4 +821,95 @@ footer {
   background: #c1401e; }
 
 .team {
-  background: url(../../images/team-background.png) center center/cover no-repeat; }
+  background: url(../../images/team-background.png) center center/cover no-repeat;
+  position: relative; }
+
+.accordion {
+  width: 100%;
+  max-width: 600px;
+  min-height: 0;
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden; }
+
+.team__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+
+.team__item {
+  margin-bottom: 41px;
+  position: relative; }
+
+.team__name {
+  font-family: 'Gagalin';
+  font-size: 14px;
+  text-align: left;
+  text-transform: uppercase;
+  line-height: 28px;
+  color: #fff;
+  margin: 0;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 18px; }
+
+.team__photo {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  margin-right: 20px; }
+
+.team__description {
+  font-family: 'Ubuntu';
+  font-size: 14px;
+  font-weight: 300;
+  color: #fff;
+  text-align: center;
+  line-height: 24px;
+  height: 101px;
+  width: 241px;
+  text-align: left; }
+
+.team__description__title {
+  font-weight: bold;
+  margin: 0 0 23px;
+  display: block;
+  cursor: pointer; }
+
+.team__people {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 50%;
+  background-image: url(../../images/backgroundgrey.png);
+  -webkit-filter: opacity(0.9);
+  filter: opacity(0.9); }
+
+.team__list ul {
+  list-style-image: url(../../images/accdown.png);
+  list-style-position: inside;
+  padding: 0;
+  margin: 0; }
