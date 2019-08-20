@@ -83,11 +83,14 @@ width: 92px
     display: flex;
     flex-direction: row;
     align-self: center;
+    padding-left: 16px;
+    &:first-child {
+        padding-left: 0;
+    }
     }
 .navigation__item::after {
     content: "•";
-    color: #fff;
-    margin-right: 16px;
+    color: #fff;    
     align-self: center;
     }
 
@@ -179,7 +182,7 @@ flex: 0 1 ;
     background: url(../images/scrolldown.png) center center / contain no-repeat;
     border: none;
     display: block;    
-    bottom: 20px;
+    padding-bottom: 20px;
     align-self: center;
     cursor: pointer;
     
@@ -217,5 +220,12 @@ right: 53px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+   
+    }
 }
+.fixed-menu__dot:hover {  
+    border: solid #fff 1px;
+    cursor: pointer;
 }
+
+     

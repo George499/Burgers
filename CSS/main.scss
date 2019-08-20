@@ -2,13 +2,43 @@ $yellow: #f9b43b;
 $flame: #e45028;
 $green: #2f3234;
 
+@mixin title ($color, $fontsize, $lineheight, $margin) {
+    font-family: 'Gagalin';
+    font-size: $fontsize;
+    text-align: left;
+    text-transform: uppercase;
+    line-height: $lineheight;
+    color: $color;
+    margin: $margin; 
+    }
+    @mixin subtitle ($font-size, $font-weight, $line-height, $color, $margin)  {
+    font-family: 'Lifehack';
+    font-size: $font-size; 
+    font-weight: $font-weight;
+    color: $color;
+    text-align: left;
+    letter-spacing: -0.02em;
+    line-height: $line-height;
+    margin: $margin; 
+    }
+    @mixin text ($font-size, $font-weight, $color, $line-height) {
+    font-family: 'Ubuntu';
+    font-size: $font-size;
+    font-weight: $font-weight;
+    color: $color;
+    text-align: center;
+    line-height: $line-height
+    }
+
+
+@import "layout/normalize.scss";
 @import "layout/base.scss";
 @import "layout/fonts.scss";
-@import "layout/normalize.scss";
+
 
 @import "blocks/mrburger.scss";
 @import "blocks/we.scss";
 @import "blocks/reviews.scss";
 @import "blocks/burgers.scss";
 @import "blocks/btn.scss";
-
+@import "blocks/team.scss"

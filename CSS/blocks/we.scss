@@ -1,36 +1,4 @@
 
-$yellow: #f9b43b;
-$flame: #e45028;
-$green: #2f3234;
-
-@mixin title ($color, $fontsize, $lineheight, $margin) {
-font-family: 'Gagalin';
-font-size: $fontsize;
-text-align: left;
-text-transform: uppercase;
-line-height: $lineheight;
-color: $color;
-margin: $margin; 
-}
-@mixin subtitle ($font-size, $font-weight, $line-height, $color, $margin)  {
-font-family: 'Lifehack';
-font-size: $font-size; 
-font-weight: $font-weight;
-color: $color;
-text-align: left;
-letter-spacing: -0.02em;
-line-height: $line-height;
-margin: $margin; 
-}
-@mixin text ($font-size, $font-weight, $color, $line-height) {
-font-family: 'Ubuntu';
-font-size: $font-size;
-font-weight: $font-weight;
-color: $color;
-text-align: center;
-line-height: $line-height
-
-}
 .section {
 height: 100vh;
 min-height: 650px;
@@ -52,10 +20,7 @@ margin: 0 auto;
     margin-bottom: 55px;
     align-self: center;
 }
-.features {
-    width: 924px;
-    height: 252px;
-}
+
 .features__list {
     display: flex;
     justify-content: space-between;
