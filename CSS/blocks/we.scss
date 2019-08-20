@@ -1,0 +1,53 @@
+
+.section {
+height: 100vh;
+min-height: 650px;
+}
+.we {
+background: url(../images/webckgrnd.png) center center / cover no-repeat;
+background-size: cover;
+}
+.we__container {
+display: flex;
+flex-direction: column;
+width: 943px;
+height: 100%;
+margin: 0 auto;
+}
+.we__title {
+    @include title ($green, 72px, 64px, 0);
+    padding-top: 127px;
+    margin-bottom: 55px;
+    align-self: center;
+}
+
+.features__list {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    flex-direction: row;
+    margin: 0;
+    
+}
+.features__list-item {
+align-self: center;
+width: 30%;
+height: 229px;
+}
+.feat__icon {
+    align-self: center;  
+    margin-bottom: 24px;
+}
+.feat__title {
+    @include subtitle (24px, 500, 28px, $green, 0)
+    text-align: center;
+    margin-bottom: 25px;
+}
+.feat__desc {
+    @include text (14px, 300, $green, 24px);
+    height: 91px;
+    width: 300px;
+    text-align: center;
+    margin: 0;
+
+}
