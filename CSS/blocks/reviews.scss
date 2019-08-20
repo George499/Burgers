@@ -43,11 +43,10 @@
     @include title (#fff, 14px, 28px, 0);
     margin-bottom: 30px;
 }
-.reviews__text {
-    @include text(13px, 500, 30px, #fff);
-    
+.text--reviews {   
     text-align: start;
     margin-bottom: 19px;
+    color: #fff;
 }
 
 

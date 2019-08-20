@@ -320,6 +320,25 @@ body {
   position: relative;
   color: #2f3234; }
 
+.subtitle {
+  font-family: 'Lifehack';
+  font-size: 24px;
+  font-weight: 500;
+  color: #2f3234;
+  text-align: left;
+  letter-spacing: -0.02em;
+  line-height: 28px;
+  margin: 0;
+  text-align: center; }
+
+.text {
+  font-family: 'Ubuntu';
+  font-size: 14px;
+  font-weight: 300;
+  color: #2f3234;
+  text-align: center;
+  line-height: 24px; }
+
 .wrapper {
   position: relative;
   overflow: hidden;
@@ -403,7 +422,8 @@ footer {
   font-style: normal; }
 
 .mrburger {
-  background: url(../images/first-bgrd.jpg) center center/cover no-repeat; }
+  background: url(../images/first-bgrd.jpg) center center/cover no-repeat;
+  position: relative; }
 
 .header {
   display: -webkit-box;
@@ -617,16 +637,19 @@ footer {
   letter-spacing: -0.02em; }
 
 .scrolldown {
-  width: 29px;
-  height: 14px;
   background: url(../images/scrolldown.png) center center/contain no-repeat;
   border: none;
   display: block;
   padding-bottom: 20px;
-  -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
-  align-self: center;
-  cursor: pointer; }
+  left: 50%;
+  height: 14px;
+  width: 29px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 40px;
+  -webkit-transform: translatex(-50%);
+  -ms-transform: translatex(-50%);
+  transform: translatex(-50%); }
 
 .fixed-menu {
   position: fixed;
@@ -709,12 +732,11 @@ footer {
   flex-direction: row;
   margin: 0; }
 
-.features__list-item {
+.features-item {
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
   align-self: center;
-  width: 30%;
-  height: 229px; }
+  width: 30%; }
 
 .feat__icon {
   -ms-flex-item-align: center;
@@ -722,27 +744,17 @@ footer {
   align-self: center;
   margin-bottom: 24px; }
 
-.feat__title {
-  font-family: 'Lifehack';
+.subtitle--features {
+  margin-bottom: 25px;
   font-size: 24px;
   font-weight: 500;
   color: #2f3234;
-  text-align: left;
+  text-align: center;
   letter-spacing: -0.02em;
-  line-height: 28px;
-  margin: 0;
-  text-align: center;
-  margin-bottom: 25px; }
+  line-height: 28px; }
 
-.feat__desc {
-  font-family: 'Ubuntu';
-  font-size: 14px;
-  font-weight: 300;
+.text--features {
   color: #2f3234;
-  text-align: center;
-  line-height: 24px;
-  height: 91px;
-  width: 300px;
   text-align: center;
   margin: 0; }
 
@@ -796,15 +808,10 @@ footer {
   margin: 0;
   margin-bottom: 30px; }
 
-.reviews__text {
-  font-family: 'Ubuntu';
-  font-size: 13px;
-  font-weight: 500;
-  color: 30px;
-  text-align: center;
-  line-height: #fff;
+.text--reviews {
   text-align: start;
-  margin-bottom: 19px; }
+  margin-bottom: 19px;
+  color: #fff; }
 
 .btn {
   border-radius: 5px;

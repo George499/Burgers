@@ -29,24 +29,26 @@ margin: 0 auto;
     margin: 0;
     
 }
-.features__list-item {
+.features-item {
 align-self: center;
 width: 30%;
-height: 229px;
+
 }
 .feat__icon {
     align-self: center;  
     margin-bottom: 24px;
 }
-.feat__title {
-    @include subtitle (24px, 500, 28px, $green, 0)
+.subtitle--features {
+     margin-bottom: 25px;
+     font-size: 24px;
+    font-weight: 500;
+    color:$green;
     text-align: center;
-    margin-bottom: 25px;
+    letter-spacing: -0.02em;
+    line-height: 28px;
 }
-.feat__desc {
-    @include text (14px, 300, $green, 24px);
-    height: 91px;
-    width: 300px;
+.text--features {
+    color: $green;
     text-align: center;
     margin: 0;
 
