@@ -321,7 +321,7 @@ body {
   color: #2f3234; }
 
 .subtitle {
-  font-family: 'Lifehack';
+  font-family: 'lifehackmedium';
   font-size: 24px;
   font-weight: 500;
   color: #2f3234;
@@ -332,7 +332,7 @@ body {
   text-align: center; }
 
 .text {
-  font-family: 'Ubuntu';
+  font-family: 'ubunturegular';
   font-size: 14px;
   font-weight: 300;
   color: #2f3234;
@@ -387,7 +387,7 @@ footer {
 
 @font-face {
   font-family: 'gagalinregular';
-  src: url("../../fonts/gagalin-regular-webfont.woff2") format("woff2"), url("../../fonts/gagalin-regular-webfont.woff") format("woff");
+  src: url("../fonts/gagalin-regular-webfont.woff2") format("woff2"), url("../fonts/gagalin-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
@@ -412,6 +412,12 @@ footer {
 @font-face {
   font-family: 'ubunturegular';
   src: url("../../fonts/ubuntu-regular-webfont.woff2") format("woff2"), url("../../fonts/ubuntu-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'lifehackmedium';
+  src: url("../../fonts/lifehack_medium-webfont.woff2") format("woff2"), url("../../fonts/lifehack_medium-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
@@ -607,7 +613,7 @@ footer {
   -webkit-box-flex: 0;
   -ms-flex: 0 1;
   flex: 0 1;
-  font-family: 'Gagalin';
+  font-family: 'gagalinregular';
   font-size: 72px;
   text-align: left;
   text-transform: uppercase;
@@ -620,7 +626,7 @@ footer {
   -ms-flex: 0 1;
   flex: 0 1;
   padding-top: 12px;
-  font-family: 'Lifehack';
+  font-family: 'lifehackmedium';
   font-size: 65px;
   font-weight: 500;
   color: #ffffff;
@@ -699,7 +705,7 @@ footer {
   margin: 0 auto; }
 
 .we__title {
-  font-family: 'Gagalin';
+  font-family: 'gagalinregular';
   font-size: 72px;
   text-align: left;
   text-transform: uppercase;
@@ -793,7 +799,7 @@ footer {
   opacity: 0; }
 
 .review__title {
-  font-family: 'Gagalin';
+  font-family: 'gagalinregular';
   font-size: 14px;
   text-align: left;
   text-transform: uppercase;
