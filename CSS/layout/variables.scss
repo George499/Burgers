@@ -1,0 +1,31 @@
+$yellow: #f9b43b;
+$flame: #e45028;
+$green: #2f3234;
+
+@mixin title ($color, $fontsize, $lineheight, $margin) {
+font-family: 'gagalinregular';
+font-size: $fontsize;
+text-align: left;
+text-transform: uppercase;
+line-height: $lineheight;
+color: $color;
+margin: $margin; 
+}
+@mixin subtitle ($font-size, $font-weight, $line-height, $color, $margin)  {
+font-family: 'lifehackmedium';
+font-size: $font-size; 
+font-weight: $font-weight;
+color: $color;
+text-align: left;
+letter-spacing: -0.02em;
+line-height: $line-height;
+margin: $margin; 
+}
+@mixin text ($font-size, $font-weight, $color, $line-height) {
+font-family: 'ubunturegular';
+font-size: $font-size;
+font-weight: $font-weight;
+color: $color;
+text-align: center;
+line-height: $line-height
+}

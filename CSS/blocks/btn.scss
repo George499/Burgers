@@ -1,0 +1,15 @@
+
+.btn { 
+ border-radius: 5px;
+ background: $flame;
+ color: #fff;
+ text-transform: uppercase;
+ font-size: 13px; 
+ cursor: pointer;
+ height: 35px;
+width: 97px;
+border: 0;
+}
+.btn:hover {
+    background: #c1401e;
+}
