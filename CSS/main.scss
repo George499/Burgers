@@ -12,7 +12,7 @@ color: $color;
 margin: $margin; 
 }
 @mixin subtitle ($font-size, $font-weight, $line-height, $color, $margin)  {
-font-family: 'lifehackmedium';
+font-family: 'lifehack';
 font-size: $font-size; 
 font-weight: $font-weight;
 color: $color;
@@ -22,7 +22,7 @@ line-height: $line-height;
 margin: $margin; 
 }
 @mixin text ($font-size, $font-weight, $color, $line-height) {
-font-family: 'ubunturegular';
+font-family: 'ubuntu';
 font-size: $font-size;
 font-weight: $font-weight;
 color: $color;

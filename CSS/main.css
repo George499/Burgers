@@ -321,7 +321,7 @@ body {
   color: #2f3234; }
 
 .subtitle {
-  font-family: 'lifehackmedium';
+  font-family: 'lifehack';
   font-size: 24px;
   font-weight: 500;
   color: #2f3234;
@@ -332,7 +332,7 @@ body {
   text-align: center; }
 
 .text {
-  font-family: 'ubunturegular';
+  font-family: 'ubuntu';
   font-size: 14px;
   font-weight: 300;
   color: #2f3234;
@@ -626,7 +626,7 @@ footer {
   -ms-flex: 0 1;
   flex: 0 1;
   padding-top: 12px;
-  font-family: 'lifehackmedium';
+  font-family: 'lifehack';
   font-size: 65px;
   font-weight: 500;
   color: #ffffff;
