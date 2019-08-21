@@ -30,7 +30,7 @@ margin: 0 auto;
     
 }
 .features-item {
-align-self: center;
+
 width: 30%;
 
 }
@@ -38,19 +38,16 @@ width: 30%;
     align-self: center;  
     margin-bottom: 24px;
 }
-.features h2 {
-     margin-bottom: 25px;
-     font-size: 24px;
-    font-weight: 500;
-    color:$green;
+.features__list h2 {
+    @include subtitle (24px, 500, 28px, $green, 0)
+     margin-bottom: 25px;     
     text-align: center;
-    letter-spacing: -0.02em;
-    line-height: 28px;
+    letter-spacing: -0.02em;   
 }
 
-.features p {
-    color: $green;
+.features__list p {
+    @include text (14px, 300, $green, 24px)
+    
     text-align: center;
     margin: 0;
-
 }

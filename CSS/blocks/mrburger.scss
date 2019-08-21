@@ -78,7 +78,7 @@ width: 92px
     flex: 0 1 auto;
     color: #ffffff;
     display: flex;
-    font-family: 'Ubuntu';
+    font-family: 'ubunturegular';
     font-size: 13px;
     font-weight: 500;
     text-align: right;
@@ -146,10 +146,10 @@ flex: 0 1 ;
 }
 
 .subtitle {
-    flex: 0 1 ;
-    padding-top: 12px;
-    @include subtitle (65px, 500, 60px, #ffffff, 0)
-    letter-spacing: -0.02em;
+flex: 0 1 ;
+padding-top: 12px;
+@include subtitle (65px, 500, 60px, #ffffff, 0)
+letter-spacing: -0.02em;
 }
 .scrolldown {
     

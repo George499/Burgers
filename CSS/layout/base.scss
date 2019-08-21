@@ -1,8 +1,4 @@
 
-$yellow: #f9b43b;
-$flame: #e45028;
-$green: #2f3234;
-
 html, body {
     font-family: "ubunturegular";
     height: 100%;
@@ -15,7 +11,7 @@ body {
     position: relative;    
     color: $green;
 }
-.subtitle {
+.subtitle {    
     @include subtitle (24px, 500, 28px, $green, 0);
     text-align: center;    
 }

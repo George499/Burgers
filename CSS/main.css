@@ -6,6 +6,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url(layout/fonts.css);
 html {
   line-height: 1.15;
   /* 1 */
@@ -321,7 +322,7 @@ body {
   color: #2f3234; }
 
 .subtitle {
-  font-family: 'lifehack';
+  font-family: 'lifehackmedium';
   font-size: 24px;
   font-weight: 500;
   color: #2f3234;
@@ -332,7 +333,7 @@ body {
   text-align: center; }
 
 .text {
-  font-family: 'ubuntu';
+  font-family: 'ubunturegular';
   font-size: 14px;
   font-weight: 300;
   color: #2f3234;
@@ -384,42 +385,6 @@ footer {
 .section {
   height: 100vh;
   min-height: 650px; }
-
-@font-face {
-  font-family: 'gagalinregular';
-  src: url("../fonts/gagalin-regular-webfont.woff2") format("woff2"), url("../fonts/gagalin-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'ubuntubold';
-  src: url("../fonts/ubuntu-b-webfont.woff2") format("woff2"), url("../fonts/ubuntu-b-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'ubuntulight';
-  src: url("../fonts/ubuntu-light-webfont.woff2") format("woff2"), url("../fonts/ubuntu-light-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'ubuntumedium';
-  src: url("../fonts/ubuntu-medium-webfont.woff2") format("woff2"), url("../fonts/ubuntu-medium-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'ubunturegular';
-  src: url("../fonts/ubuntu-regular-webfont.woff2") format("woff2"), url("../fonts/ubuntu-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'lifehackmedium';
-  src: url("../fonts/lifehack_medium-webfont.woff2") format("woff2"), url("../fonts/lifehack_medium-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
 
 .mrburger {
   background: url(../images/first-bgrd.jpg) center center/cover no-repeat;
@@ -536,7 +501,7 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-family: 'Ubuntu';
+  font-family: 'ubunturegular';
   font-size: 13px;
   font-weight: 500;
   text-align: right;
@@ -626,7 +591,7 @@ footer {
   -ms-flex: 0 1;
   flex: 0 1;
   padding-top: 12px;
-  font-family: 'lifehack';
+  font-family: 'lifehackmedium';
   font-size: 65px;
   font-weight: 500;
   color: #ffffff;
@@ -733,9 +698,6 @@ footer {
   margin: 0; }
 
 .features-item {
-  -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
-  align-self: center;
   width: 30%; }
 
 .feat__icon {
@@ -744,17 +706,26 @@ footer {
   align-self: center;
   margin-bottom: 24px; }
 
-.features h2 {
-  margin-bottom: 25px;
+.features__list h2 {
+  font-family: 'lifehackmedium';
   font-size: 24px;
   font-weight: 500;
   color: #2f3234;
-  text-align: center;
+  text-align: left;
   letter-spacing: -0.02em;
-  line-height: 28px; }
+  line-height: 28px;
+  margin: 0;
+  margin-bottom: 25px;
+  text-align: center;
+  letter-spacing: -0.02em; }
 
-.features p {
+.features__list p {
+  font-family: 'ubunturegular';
+  font-size: 14px;
+  font-weight: 300;
   color: #2f3234;
+  text-align: center;
+  line-height: 24px;
   text-align: center;
   margin: 0; }
 
