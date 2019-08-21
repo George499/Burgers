@@ -697,7 +697,7 @@ footer {
   flex-direction: row;
   margin: 0; }
 
-.features-item {
+.features__item {
   width: 30%; }
 
 .feat__icon {
