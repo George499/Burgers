@@ -386,38 +386,32 @@ footer {
   min-height: 650px; }
 
 @font-face {
-  font-family: 'Ubuntu';
-  src: url("../../fonts/subset-Ubuntu-Light.woff2") format("woff2"), url("../../fonts/subset-Ubuntu-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Ubuntu';
-  src: url("../fonts/subset-Ubuntu-Medium.woff2") format("woff2"), url("../fonts/subset-Ubuntu-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Ubuntu';
-  src: url("../fonts/subset-Ubuntu-Light.woff2") format("woff2"), url("../fonts/subset-Ubuntu.woff") format("woff");
+  font-family: 'gagalinregular';
+  src: url("gagalin-regular-webfont.woff2") format("woff2"), url("gagalin-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  font-family: 'Ubuntu';
-  src: url("../fonts/subset-Ubuntu-Bold.woff2") format("woff2"), url("../fonts/subset-Ubuntu-Bold.woff") format("woff");
-  font-weight: bold;
+  font-family: 'ubuntubold';
+  src: url("ubuntu-b-webfont.woff2") format("woff2"), url("ubuntu-b-webfont.woff") format("woff");
+  font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  font-family: 'Lifehack';
-  src: url("../fonts/subset-Lifehack-Medium.woff2") format("woff2"), url("../fonts/subset-Lifehack-Medium.woff") format("woff");
-  font-weight: 500;
+  font-family: 'ubuntulight';
+  src: url("ubuntu-light-webfont.woff2") format("woff2"), url("ubuntu-light-webfont.woff") format("woff");
+  font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  font-family: 'Gagalin';
-  src: url("../../fonts/subset-Gagalin-Regular.woff2") format("woff2"), url("../../fonts/subset-Gagalin-Regular.woff") format("woff");
+  font-family: 'ubuntumedium';
+  src: url("ubuntu-medium-webfont.woff2") format("woff2"), url("ubuntu-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ubunturegular';
+  src: url("ubuntu-regular-webfont.woff2") format("woff2"), url("ubuntu-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
@@ -826,6 +820,3 @@ footer {
 
 .btn:hover {
   background: #c1401e; }
-
-.team {
-  background: url(../../images/team-background.png) center center/cover no-repeat; }
