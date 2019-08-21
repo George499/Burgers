@@ -38,7 +38,7 @@ width: 30%;
     align-self: center;  
     margin-bottom: 24px;
 }
-.subtitle--features {
+.features h2 {
      margin-bottom: 25px;
      font-size: 24px;
     font-weight: 500;
@@ -47,7 +47,8 @@ width: 30%;
     letter-spacing: -0.02em;
     line-height: 28px;
 }
-.text--features {
+
+.features p {
     color: $green;
     text-align: center;
     margin: 0;

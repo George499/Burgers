@@ -744,7 +744,7 @@ footer {
   align-self: center;
   margin-bottom: 24px; }
 
-.subtitle--features {
+.features h2 {
   margin-bottom: 25px;
   font-size: 24px;
   font-weight: 500;
@@ -753,7 +753,7 @@ footer {
   letter-spacing: -0.02em;
   line-height: 28px; }
 
-.text--features {
+.features p {
   color: #2f3234;
   text-align: center;
   margin: 0; }
