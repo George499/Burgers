@@ -1,10 +1,6 @@
 
-$yellow: #f9b43b;
-$flame: #e45028;
-$green: #2f3234;
-
 html, body {
-    font-family: Ubuntu;
+    font-family: "ubunturegular";
     height: 100%;
 }
 body {
@@ -14,6 +10,13 @@ body {
     -moz-osx-font-smoothing: grayscale;
     position: relative;    
     color: $green;
+}
+.subtitle {    
+    @include subtitle (24px, 500, 28px, $green, 0);
+    text-align: center;    
+}
+.text {
+    @include text(14px, 300, $green, 24px);  
 }
 
 .wrapper {

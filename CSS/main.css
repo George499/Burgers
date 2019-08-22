@@ -6,6 +6,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url(layout/fonts.css);
 html {
   line-height: 1.15;
   /* 1 */
@@ -309,7 +310,7 @@ template {
   display: none; }
 
 html, body {
-  font-family: Ubuntu;
+  font-family: "ubunturegular";
   height: 100%; }
 
 body {
@@ -319,6 +320,25 @@ body {
   -moz-osx-font-smoothing: grayscale;
   position: relative;
   color: #2f3234; }
+
+.subtitle {
+  font-family: 'lifehackmedium';
+  font-size: 24px;
+  font-weight: 500;
+  color: #2f3234;
+  text-align: left;
+  letter-spacing: -0.02em;
+  line-height: 28px;
+  margin: 0;
+  text-align: center; }
+
+.text {
+  font-family: 'ubunturegular';
+  font-size: 14px;
+  font-weight: 300;
+  color: #2f3234;
+  text-align: center;
+  line-height: 24px; }
 
 .wrapper {
   position: relative;
@@ -366,44 +386,9 @@ footer {
   height: 100vh;
   min-height: 650px; }
 
-@font-face {
-  font-family: 'Ubuntu';
-  src: url("subset-Ubuntu-Light.woff2") format("woff2"), url("subset-Ubuntu-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Ubuntu';
-  src: url("subset-Ubuntu-Medium.woff2") format("woff2"), url("subset-Ubuntu-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Ubuntu';
-  src: url("subset-Ubuntu.woff2") format("woff2"), url("subset-Ubuntu.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Ubuntu';
-  src: url("subset-Ubuntu-Bold.woff2") format("woff2"), url("subset-Ubuntu-Bold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Lifehack';
-  src: url("subset-Lifehack-Medium.woff2") format("woff2"), url("subset-Lifehack-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Gagalin';
-  src: url("subset-Gagalin-Regular.woff2") format("woff2"), url("subset-Gagalin-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
 .mrburger {
-  background: url(../images/first-bgrd.jpg) center center/cover no-repeat; }
+  background: url(../images/first-bgrd.jpg) center center/cover no-repeat;
+  position: relative; }
 
 .header {
   display: -webkit-box;
@@ -516,7 +501,7 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-family: 'Ubuntu';
+  font-family: 'ubunturegular';
   font-size: 13px;
   font-weight: 500;
   text-align: right;
@@ -593,7 +578,7 @@ footer {
   -webkit-box-flex: 0;
   -ms-flex: 0 1;
   flex: 0 1;
-  font-family: 'Gagalin';
+  font-family: 'gagalinregular';
   font-size: 72px;
   text-align: left;
   text-transform: uppercase;
@@ -606,7 +591,7 @@ footer {
   -ms-flex: 0 1;
   flex: 0 1;
   padding-top: 12px;
-  font-family: 'Lifehack';
+  font-family: 'lifehackmedium';
   font-size: 65px;
   font-weight: 500;
   color: #ffffff;
@@ -617,16 +602,19 @@ footer {
   letter-spacing: -0.02em; }
 
 .scrolldown {
-  width: 29px;
-  height: 14px;
   background: url(../images/scrolldown.png) center center/contain no-repeat;
   border: none;
   display: block;
   padding-bottom: 20px;
-  -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
-  align-self: center;
-  cursor: pointer; }
+  left: 50%;
+  height: 14px;
+  width: 29px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 40px;
+  -webkit-transform: translatex(-50%);
+  -ms-transform: translatex(-50%);
+  transform: translatex(-50%); }
 
 .fixed-menu {
   position: fixed;
@@ -682,7 +670,7 @@ footer {
   margin: 0 auto; }
 
 .we__title {
-  font-family: 'Gagalin';
+  font-family: 'gagalinregular';
   font-size: 72px;
   text-align: left;
   text-transform: uppercase;
@@ -709,12 +697,8 @@ footer {
   flex-direction: row;
   margin: 0; }
 
-.features__list-item {
-  -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
-  align-self: center;
-  width: 30%;
-  height: 229px; }
+.features__item {
+  width: 30%; }
 
 .feat__icon {
   -ms-flex-item-align: center;
@@ -722,8 +706,8 @@ footer {
   align-self: center;
   margin-bottom: 24px; }
 
-.feat__title {
-  font-family: 'Lifehack';
+.features__list h2 {
+  font-family: 'lifehackmedium';
   font-size: 24px;
   font-weight: 500;
   color: #2f3234;
@@ -731,18 +715,17 @@ footer {
   letter-spacing: -0.02em;
   line-height: 28px;
   margin: 0;
+  margin-bottom: 25px;
   text-align: center;
-  margin-bottom: 25px; }
+  letter-spacing: -0.02em; }
 
-.feat__desc {
-  font-family: 'Ubuntu';
+.features__list p {
+  font-family: 'ubunturegular';
   font-size: 14px;
   font-weight: 300;
   color: #2f3234;
   text-align: center;
   line-height: 24px;
-  height: 91px;
-  width: 300px;
   text-align: center;
   margin: 0; }
 
@@ -787,7 +770,7 @@ footer {
   opacity: 0; }
 
 .review__title {
-  font-family: 'Gagalin';
+  font-family: 'gagalinregular';
   font-size: 14px;
   text-align: left;
   text-transform: uppercase;
@@ -796,15 +779,10 @@ footer {
   margin: 0;
   margin-bottom: 30px; }
 
-.reviews__text {
-  font-family: 'Ubuntu';
-  font-size: 13px;
-  font-weight: 500;
-  color: 30px;
-  text-align: center;
-  line-height: #fff;
+.text--reviews {
   text-align: start;
-  margin-bottom: 19px; }
+  margin-bottom: 19px;
+  color: #fff; }
 
 .btn {
   border-radius: 5px;

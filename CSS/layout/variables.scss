@@ -3,7 +3,7 @@ $flame: #e45028;
 $green: #2f3234;
 
 @mixin title ($color, $fontsize, $lineheight, $margin) {
-font-family: 'Gagalin';
+font-family: 'gagalinregular';
 font-size: $fontsize;
 text-align: left;
 text-transform: uppercase;
@@ -12,7 +12,7 @@ color: $color;
 margin: $margin; 
 }
 @mixin subtitle ($font-size, $font-weight, $line-height, $color, $margin)  {
-font-family: 'Lifehack';
+font-family: 'lifehackmedium';
 font-size: $font-size; 
 font-weight: $font-weight;
 color: $color;
@@ -22,7 +22,7 @@ line-height: $line-height;
 margin: $margin; 
 }
 @mixin text ($font-size, $font-weight, $color, $line-height) {
-font-family: 'Ubuntu';
+font-family: 'ubunturegular';
 font-size: $font-size;
 font-weight: $font-weight;
 color: $color;
