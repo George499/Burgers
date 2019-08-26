@@ -961,7 +961,7 @@ h1 {
   background: #c1401e; }
 
 .team {
-  background: url(../../images/team-background.png) center center/cover no-repeat;
+  background: url(../images/team-background.png) center center/cover no-repeat;
   position: relative; }
 
 .team__name {
@@ -1018,7 +1018,7 @@ ul h1:hover {
   color: #f9b43b; }
 
 .team__name:before {
-  content: url(/images/accdown.png);
+  content: url(../images/accdown.png);
   padding-right: 0.625rem; }
 
 .team__photo {
@@ -1070,7 +1070,7 @@ ul h1:hover {
   right: 0;
   height: 100%;
   width: 50%;
-  background-image: url(../../images/backgroundgrey.png);
+  background-image: url(../images/backgroundgrey.png);
   -webkit-filter: opacity(0.9);
   filter: opacity(0.9); }
   @media screen and (max-width: 768px) {
@@ -1125,7 +1125,7 @@ ul h1:hover {
       flex-direction: column; } }
 
 .menu {
-  background: url(/images/menubckgrnd.png) center center/cover no-repeat;
+  background: url(../images/menubckgrnd.png) center center/cover no-repeat;
   position: relative; }
   @media screen and (max-width: 768px) {
     .menu {
@@ -1204,13 +1204,13 @@ ul h1:hover {
   height: 100vh;
   border: none; }
   .menu__button--first {
-    background: url(/images/menuback1.png) no-repeat;
+    background: url(../images/menuback1.png) no-repeat;
     background-size: cover; }
   .menu__button--second {
-    background: url(/images/menuback2.png) no-repeat;
+    background: url(../images/menuback2.png) no-repeat;
     background-size: cover; }
   .menu__button--third {
-    background: url(/images/menuback3.png) no-repeat;
+    background: url(../images/menuback3.png) no-repeat;
     background-size: cover; }
 
 .menu__item--active .menu__button {
@@ -1223,12 +1223,12 @@ ul h1:hover {
   padding: 3.875rem 2.3125rem 0rem 2.0625rem; }
 
 .contacts {
-  background: url(/images/map.png) center center/cover no-repeat; }
+  background: url(../images/map.png) center center/cover no-repeat; }
 
 .footer {
   bottom: 0;
   width: 100%;
-  background: url(/images/footer.png);
+  background: url(../images/footer.png);
   position: absolute; }
 
 .footer__container {
@@ -1301,7 +1301,7 @@ ul h1:hover {
     fill: #fff; }
 
 .form {
-  background: url(/images/formback.png) center center/cover no-repeat;
+  background: url(../images/formback.png) center center/cover no-repeat;
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
