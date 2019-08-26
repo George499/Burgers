@@ -10,6 +10,14 @@
 .header {
     width: 100%;   
 }
+.mr__burger__title {
+    @include tablets {
+        font-size: rem(65px);
+    }
+    @include phones {
+        font-size: rem(63px)
+    }
+}
 
 .header__buttons {
     display: flex;
@@ -21,12 +29,11 @@
     }
 }
 .mrburger__container {    
-    height: 100%;
+    height: 95%;
     display: flex;
     flex-direction: column;
     flex: 1; 
-    justify-content: center;
-   
+    justify-content: center;  
     
 }
 .header__container {
@@ -46,6 +53,9 @@
     @include tablets {
     flex-direction: column;
     padding: 0 23%;
+}
+@include phones {
+    padding: 0 12%;
 }
 }
 
@@ -70,6 +80,9 @@ width: rem(100px)
     
     flex-direction: row;
     white-space: nowrap; 
+    @include tablets {
+        display: none;
+    }
 }
 
 .navigation__item {
@@ -153,6 +166,8 @@ width: 100%;
     @include tablets {
 
         width: 100%;
+        align-items: center;
+
           }      
 }
 
@@ -178,6 +193,12 @@ flex: 0 1 ;
 padding-top: rem(12px);
 @include subtitle (rem(65px), 500, rem(60px), #ffffff, 0)
 letter-spacing: -0.02em;
+@include tablets {
+    text-align: center;
+}
+@include phones {
+    font-size: rem(54px);
+}
 }
 .scrolldown {
 border: none;
@@ -187,14 +208,17 @@ width: rem(29px);
 cursor: pointer;
 position: absolute;
 bottom: rem(40px);
-
+@include phones {
+    left: 45%;
 }
-
-
+}
 .fixed-menu {
 position: fixed;
 top: rem(95px);
 right: rem(53px);
+@include tablets {
+    display: none;
+}
 }
 .fixed-menu__item {
     &--current {
@@ -203,6 +227,7 @@ right: rem(53px);
         }
     }
 }
+
 
 .fixed-menu__dot {
     width: rem(16px);
@@ -238,6 +263,7 @@ right: rem(53px);
     margin-left: rem(30px);
     align-self: center;
     display: none;
+    
     @include tablets {
         display:  inline-flex;
        
@@ -258,7 +284,7 @@ right: rem(53px);
         position: absolute;
     }
     &:before {
-        top: rem(9px);
+        top: 0;
     }
     &:after {
         bottom: 0;
@@ -266,7 +292,6 @@ right: rem(53px);
 }
 .header-link {
     display: flex;
-    flex-direction: row;
-    
+    flex-direction: row;   
 
 }
