@@ -1,5 +1,5 @@
 .team {
-    background: url(../../images/team-background.png) center center / cover no-repeat;
+    background: url(../images/team-background.png) center center / cover no-repeat;
     position: relative;
     
 }
@@ -53,7 +53,7 @@ margin-bottom: 0;
         color: $yellow;
     }
 .team__name:before {
-        content: url(/images/accdown.png);
+        content: url(../images/accdown.png);
                
         padding-right: rem(10px);
     }
@@ -96,7 +96,7 @@ margin-bottom: 0;
         right: 0;               
         height: 100%;
         width: 50%;       
-        background-image: url(../../images/backgroundgrey.png);
+        background-image: url(../images/backgroundgrey.png);
         filter: opacity(0.9);
         @include tablets {
         width: 100%;

@@ -1,5 +1,5 @@
 .menu {
-    background: url(/images/menubckgrnd.png) center center / cover no-repeat;
+    background: url(../images/menubckgrnd.png) center center / cover no-repeat;
     position: relative;
     @include tablets {
         max-width: rem(940px);  
@@ -27,8 +27,7 @@
     font-size: rem(40px);
     color: #fff;
     transform: rotate(180deg);
-    padding: rem(40px) rem(25px) rem(0px) rem(25px);
-    
+    padding: rem(40px) rem(25px) rem(0px) rem(25px);    
     height: 100%;
     white-space: nowrap;
     writing-mode: vertical-lr;
@@ -72,15 +71,15 @@ text-align: center
     
     border: none;
     &--first{
-        background: url(/images/menuback1.png) no-repeat;
+        background: url(../images/menuback1.png) no-repeat;
         background-size: cover;
     }
     &--second{
-        background: url(/images/menuback2.png) no-repeat;
+        background: url(../images/menuback2.png) no-repeat;
         background-size: cover;
     }
     &--third{
-        background: url(/images/menuback3.png) no-repeat;
+        background: url(../images/menuback3.png) no-repeat;
         background-size: cover;
     }
 
