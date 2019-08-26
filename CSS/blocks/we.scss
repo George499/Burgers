@@ -1,7 +1,7 @@
 
 .section {
 height: 100vh;
-min-height: 650px;
+min-height: rem(650px);
 }
 .we {
 background: url(../images/webckgrnd.png) center center / cover no-repeat;
@@ -10,14 +10,14 @@ background-size: cover;
 .we__container {
 display: flex;
 flex-direction: column;
-width: 943px;
+width: rem(943px);
 height: 100%;
 margin: 0 auto;
 }
 .we__title {
-    @include title ($green, 72px, 64px, 0);
-    padding-top: 127px;
-    margin-bottom: 55px;
+    @include title ($green, rem(72px), rem(64px), 0);
+    padding-top: rem(127px);
+    margin-bottom: rem(55px);
     align-self: center;
 }
 
@@ -36,18 +36,22 @@ width: 30%;
 }
 .feat__icon {
     align-self: center;  
-    margin-bottom: 24px;
+    margin-bottom: rem(24px);
 }
 .features__list h2 {
-    @include subtitle (24px, 500, 28px, $green, 0)
-     margin-bottom: 25px;     
+    @include subtitle (rem(24px), 500, rem(28px), $green, 0)
+     margin-bottom: rem(25px);     
     text-align: center;
     letter-spacing: -0.02em;   
 }
 
 .features__list p {
-    @include text (14px, 300, $green, 24px)
+    @include text (rem(14px), 300, $green, rem(24px))
     
     text-align: center;
     margin: 0;
+}
+.feat__image {
+    height: rem(89px);
+    width: rem(97px);
 }
