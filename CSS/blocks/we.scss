@@ -10,6 +10,8 @@ background-size: cover;
 .we__container {
 flex-direction: column;
 margin: 0 auto;
+max-width: 100%;
+max-height: auto;
 }
 .we__title {
     @include title ($green, rem(72px), rem(64px), 0);
