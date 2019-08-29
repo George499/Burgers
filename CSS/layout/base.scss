@@ -8,7 +8,7 @@ html, body {
     }
 
     @include phones {
-        font-size: 14px;
+        -webkit-text-size-adjust: none;
     }
 }
 body {
@@ -73,6 +73,9 @@ h1, h2, h3 {
 }
 h1 {    
     @include title ($yellow, rem(72px), rem(85px), 0);
+    @include phones {
+        
+    }
     }
 .container {
     width: 95%;
