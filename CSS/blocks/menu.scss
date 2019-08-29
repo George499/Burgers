@@ -1,0 +1,97 @@
+.menu {
+    background: url(../images/menubckgrnd.png) center center / cover no-repeat;
+    position: relative;
+    @include tablets {
+        max-width: rem(940px);  
+    }
+}
+.menu p {
+    color: #fff;
+    padding: rem(62px) rem(35px);
+}
+.menu__aside {
+    position: absolute;
+    right: rem(0px);
+    
+    height: 100%;
+   
+}
+.menu__title {
+    padding-top: rem(111px);
+    padding-left: rem(94px);
+    color: #fff;
+    line-height: rem(64px);
+    position: absolute;
+}
+.menu__name {
+    font-size: rem(40px);
+    color: #fff;
+    transform: rotate(180deg);
+    padding: rem(40px) rem(25px) rem(0px) rem(25px);    
+    height: 100%;
+    white-space: nowrap;
+    writing-mode: vertical-lr;
+    border: none;
+}
+
+.menu__item {
+display: flex;
+
+text-align: center
+}
+.menu__desc {
+    width: rem(0px);
+    font-family: "ubuntu-light";
+    color: #fff;
+    line-height: 1.6em;
+    font-size: rem(14px);
+    overflow: hidden;
+
+}
+.menu__accordeon {
+    display: flex;
+    height: 100%;
+}
+
+.menu__button {
+    box-sizing: content-box;
+    font-family: "gagalin";
+    font-size: rem(36px);
+    text-transform: uppercase;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0;
+    background-position: center center;
+    background-size: cover;      
+    height: 100vh;
+    width: rem(80px);
+    border: none;
+    align-items: center;
+    &--first{
+        background: url(../images/menuback1.png) no-repeat;
+        background-size: cover;
+    }
+    &--second{
+        background: url(../images/menuback2.png) no-repeat;
+        background-size: cover;
+    }
+    &--third{
+        background: url(../images/menuback3.png) no-repeat;
+        background-size: cover;
+    }
+
+}
+.menu__item--active .menu__button {
+    color: #f9b43b;
+    
+}
+
+.menu__item--active .menu__desc {
+min-width: rem(540px);
+background-color: rgba(47, 50, 52, 0.8);
+
+height: 100%;
+padding: rem(62px) rem(37px) rem(0px) rem(33px);
+}
