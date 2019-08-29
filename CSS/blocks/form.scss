@@ -30,6 +30,9 @@ margin-right: rem(20px);
 }
 .form__elem {
     display: flex;
+    @include tablets {
+        flex-direction: column;
+    }
     @include phones {
         flex-direction: column;
     }
@@ -74,10 +77,11 @@ margin-right: rem(20px);
     position: relative;
 }
 .form__trueradio {
-    visibility: hidden;
+    visibility: hidden;    
 }
 .form__fakeradio:before {
     content: "";
+    
     height: rem(7px);
     width: rem(7px);
     background-color: $flame;
@@ -88,7 +92,8 @@ margin-right: rem(20px);
     bottom: 0;
     left: 0;
     margin: auto auto;
-    visibility: hidden;
+    visibility: hidden;    
+    
 }
 .form__fakeradio {
 height: rem(15px);
@@ -98,9 +103,14 @@ position: absolute;
 top: 0;
 background: #ffffff;
 display: block;
+&--checkbox {
+    border-radius: 0;
+    
+}
 }
 .form__trueradio:checked ~ .form__fakeradio:before {
     visibility: visible;
+    
 }
 .form__title {
     @include tablets {

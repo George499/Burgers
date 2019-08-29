@@ -9,14 +9,14 @@ background-size: cover;
 }
 .we__container {
 flex-direction: column;
+justify-content: center;
 margin: 0 auto;
-max-width: 100%;
 max-height: auto;
 }
 .we__title {
     @include title ($green, rem(72px), rem(64px), 0);
     @include phones {
-        font-size: rem(63px);
+        font-size: rem(50px);
     }
     padding-top: rem(127px);
     margin-bottom: rem(55px);
