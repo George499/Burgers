@@ -1218,7 +1218,11 @@ ul h1:hover {
   background-position: center center;
   background-size: cover;
   height: 100vh;
-  border: none; }
+  width: 5rem;
+  border: none;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
   .menu__button--first {
     background: url(../images/menuback1.png) no-repeat;
     background-size: cover; }

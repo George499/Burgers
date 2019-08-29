@@ -66,10 +66,9 @@ text-align: center
     background-position: center center;
     background-size: cover;      
     height: 100vh;
-    
-    
-    
+    width: rem(80px);
     border: none;
+    align-items: center;
     &--first{
         background: url(../images/menuback1.png) no-repeat;
         background-size: cover;
