@@ -1244,7 +1244,7 @@ ul h1:hover {
 
 .contacts {
   background: url(../images/map.png) center center/cover no-repeat;
-  height: 100%; }
+  height: 100vh; }
 
 .footer {
   bottom: 0;
