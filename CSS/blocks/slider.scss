@@ -78,13 +78,11 @@
     background: rgba(232, 233, 235, 0.9);
     border-radius: rem(5px);
     left: rem(90px);
-    top: 0;
-    opacity: 0;
+    top: 0;    
     transition: 0.3s;
-    padding: rem(20px);
-    
+    padding: rem(20px);    
     width: rem(270px);
-    display: flex;
+    display: none;
     
 }
 
@@ -92,7 +90,7 @@
     background-color: $flame;
     
     .popup {
-        opacity: inherit;
+        display: flex;     
         
 }
 }

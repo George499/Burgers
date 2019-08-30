@@ -1579,20 +1579,19 @@ ul h1:hover {
   border-radius: 0.3125rem;
   left: 5.625rem;
   top: 0;
-  opacity: 0;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
   padding: 1.25rem;
   width: 16.875rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
+  display: none; }
 
 .slider__icon:hover {
   background-color: #e45028; }
   .slider__icon:hover .popup {
-    opacity: inherit; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
 
 .popup__list {
   width: 100%;
