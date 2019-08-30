@@ -974,7 +974,8 @@ h1 {
   border: 0; }
 
 .btn:hover {
-  background: #c1401e; }
+  background: #c1401e;
+  display: inline-block; }
 
 .team {
   background: url(../images/team-background.png) center center/cover no-repeat;
