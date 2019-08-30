@@ -1,0 +1,255 @@
+.slider {
+    background: linear-gradient(to top, #f9b43b, #eb8c38 48%, #f9b43b 74%);
+}
+.slider__title {
+    color: #fff;
+    margin-bottom: rem(30px);
+    @include tablets {
+        text-align: center;
+       
+        
+    }
+}
+
+.slider__container {
+    height: 100%;
+    justify-content: center;
+    overflow: hidden;
+}
+.slider__list {
+    justify-content: center;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    
+}
+.slider__item {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: rem(90px) 0rem;
+    @include tablets {
+        flex-direction: column;
+    }
+}
+.slider__item__left {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    margin-right: rem(9px);
+    justify-content: center;
+    @include tablets {
+        margin: 0;
+        width: 60%;
+    }
+    @include phones {
+     width: 100%;
+    }
+}
+.slider__icon {
+    position: absolute;
+    left: 0rem;
+    top: 0rem;
+    height: rem(90px);
+    width: rem(90px);
+    border-radius: rem(5px);
+    background-color: #f08c33;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.slider__icon__sprite {
+    height: rem(44px);
+    width: rem(46px);
+    position: absolute;
+    left: rem(22px);
+    bottom: rem(32px);
+    color: #fff;
+}
+.slider__icon__text {
+    position: absolute;
+    @include title(#fff, rem(14px), inherit, 0);
+    bottom: rem(10px);
+    left: rem(23px);
+}
+.popup {
+    position: absolute;
+    background: rgba(232, 233, 235, 0.9);
+    border-radius: rem(5px);
+    left: rem(90px);
+    top: 0;
+    opacity: 0;
+    transition: 0.3s;
+    padding: rem(20px);
+    
+    width: rem(270px);
+    display: flex;
+    
+}
+
+.slider__icon:hover {
+    background-color: $flame;
+    
+    .popup {
+        opacity: inherit;
+        
+}
+}
+
+.popup__list {
+    width: 100%;
+
+    @include text (rem(14px), 500, $green, 24px);
+    font-family: ubuntumedium;
+    
+}
+.popup__item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    min-width: rem(155px);
+    margin-bottom: rem(18px);
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+.popup__title {
+    padding: rem(10px);
+}
+.popup__weight {
+    position: absolute;
+    right: 0;
+    @include text (rem(14px), 300, $green, 24px);
+    font-family: 'ubuntu-light';
+}
+.popup__sprite {
+    height: rem(39px);
+    width: rem(44px);
+}
+.popup__img {
+    margin-right: rem(24px);
+}
+.slider__burger-photo {
+    min-width: 70%;
+    max-height: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include tablets {
+        max-width: 100%;
+        padding-top: 60px;
+    }
+    }
+.slider__burger__img {
+    @include tablets {
+        max-width: 100%;
+        height: auto;
+      }
+}
+.calories__icon {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    opacity: 0.7;
+    @include tablets {
+    right: 0;
+    top: 0;
+    bottom: auto;
+    left: auto;
+    }
+}
+.calories__icon__sprite {
+    height: rem(60px);
+    width: rem(60px);
+}
+.calories__icon-text {
+    position: absolute;
+    font-family: 'gagalinregular';
+    font-size: rem(20px);
+    color: #fff;
+    &--digits {
+        top: 40%;
+        left: 25%;
+    }
+    &--word {
+        top: 100%;
+        left: rem(15px);
+        font-size: rem(14px);
+    }
+}
+.slider__item__right {
+    width: 50%;
+    height: 100%;   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include tablets {
+        width: 80%;
+    }
+    @include phones {
+        width: 100%
+    }
+    }
+
+.slider__item__desc {
+    font-family: 'ubuntulight';
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: left;
+    line-height: 24px;
+    @include tablets {
+        text-align: center;
+    }
+    }
+    .slider__price {
+        color: $flame;
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;  
+        @include tablets {
+            justify-content: center;
+        }   
+        &--big{
+            margin-right: rem(5px);
+        }   
+        &--small {
+            font-size: 30px;
+            margin-right: rem(29px);
+        }
+    }
+    .btn--slider {
+        font-family: ubuntumedium;
+    }
+    .slider__scrolls {
+    position: absolute;
+    
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: rem(1100px);
+}
+.slider__scroll {
+    border: 0;
+    background: transparent;
+    padding: 0;
+}
+.scrollarrow {
+    width: rem(29px);
+    cursor: pointer;
+    display: block;
+    height: rem(27px);
+    
+    &--left{
+    transform: rotate(90deg);
+}
+    &--right {
+    transform: rotate(-90deg);
+    }
+}
+    
+
+
+    
