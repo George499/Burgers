@@ -1130,7 +1130,7 @@ ul h1:hover {
   padding-left: 0; }
 
 .team__item--active .team__name:before {
-  content: url(/images/accup.png); }
+  content: url(../images/accup.png); }
 
 .team__item--active .team__info {
   height: inherit;
