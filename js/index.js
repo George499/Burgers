@@ -11,8 +11,15 @@ for (let i = 0; i < team__item.length; i++) {
     })
 }
 
-let header__menu__link = document.querySelectorAll("#header__menu__link");
-let hamburger__fullscreen = document.querySelectorAll("#hamburger__fullscreen");
+let header__menu__link = document.querySelector("#menulink");
+let hamburger__fullscreen = document.querySelector("#fullscreen");
 header__menu__link.addEventListener ("click", function(){
-    
-})
+    fullscreen.style.right = '0' }
+)
+
+let exit = document.querySelector("#exit");
+exit.addEventListener ("click", function(){
+    hamburger__fullscreen.style.right = "-100%";
+} )
+
+

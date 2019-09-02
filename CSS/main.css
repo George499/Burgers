@@ -324,7 +324,13 @@ body {
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
   color: #2f3234; }
 
 .subtitle {
@@ -348,7 +354,6 @@ body {
 
 .wrapper {
   position: relative;
-  overflow: hidden;
   width: 100%;
   min-height: 100%; }
 
@@ -498,6 +503,9 @@ h1 {
 .navigation {
   margin: 0 auto;
   margin-right: 0.9375rem; }
+  @media screen and (max-width: 768px) {
+    .navigation {
+      display: none; } }
 
 .navigation__list {
   display: -webkit-box;
@@ -724,7 +732,9 @@ h1 {
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
   align-self: center;
-  display: none; }
+  display: none;
+  background: none;
+  border: none; }
   @media screen and (max-width: 768px) {
     .header-menu-link {
       display: -webkit-inline-box;
@@ -972,8 +982,7 @@ h1 {
 
 .btn:hover {
   background: #c1401e;
-  display: inline-block;
-  background: url(../js/index.js); }
+  display: inline-block; }
 
 .team {
   background: url(../images/team-background.png) center center/cover no-repeat;
@@ -1243,7 +1252,8 @@ ul h1:hover {
 
 .contacts {
   background: url(../images/map.png) center center/cover no-repeat;
-  height: 100vh; }
+  height: 100vh;
+  position: relative; }
 
 .footer {
   bottom: 0;
@@ -1778,7 +1788,12 @@ ul h1:hover {
 .hamburger-fullscreen {
   background: rgba(47, 50, 52, 0.99);
   position: fixed;
-  width: 100%; }
+  width: 100%;
+  height: 100vh;
+  right: 0;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s; }
 
 .container--hamburger {
   width: 95%;
@@ -1795,12 +1810,17 @@ ul h1:hover {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 100%;
   margin-top: 0.625rem; }
 
 .hamburger__exit {
   border: none;
   background: transparent; }
+  .hamburger__exit:hover {
+    background: none; }
 
 .exit__cross {
   width: 1.25rem;
@@ -1826,15 +1846,10 @@ ul h1:hover {
   position: relative; }
   .hamburger__item:first-child {
     margin: 0; }
+  .hamburger__item:last-child:after {
+    display: none; }
 
-.hamburger__link {
-  text-decoration: none;
-  color: #fff;
-  font-family: 'ubunturegular';
-  font-size: 1.5rem;
-  text-transform: uppercase; }
-
-.hamburger__link:after {
+.hamburger__item:after {
   position: absolute;
   top: 100%;
   right: 50%;
@@ -1843,5 +1858,10 @@ ul h1:hover {
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
   align-self: center; }
-  .hamburger__link:after :last-child {
-    display: none; }
+
+.hamburger__link {
+  text-decoration: none;
+  color: #fff;
+  font-family: 'ubunturegular';
+  font-size: 1.5rem;
+  text-transform: uppercase; }

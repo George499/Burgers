@@ -1,13 +1,7 @@
 @charset "UTF-8";
 .hamburger-fullscreen {
   background: rgba(47, 50, 52, 0.99);
-  position: fixed;
-  width: 100%;
-  right: -100%;
-  z-index: 2;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s; }
+  width: 100%; }
 
 .container--hamburger {
   width: 95%;
@@ -26,6 +20,10 @@
   justify-content: space-between;
   width: 100%;
   margin-top: rem(10px); }
+
+.hamburger__exit {
+  border: none;
+  background: transparent; }
 
 .exit__cross {
   width: rem(20px);
@@ -47,17 +45,26 @@
   justify-content: center; }
 
 .hamburger__item {
-  margin-top: rem(40px); }
+  margin-top: rem(40px);
+  position: relative; }
+  .hamburger__item:first-child {
+    margin: 0; }
 
 .hamburger__link {
+  text-decoration: none;
   color: #fff;
   font-family: 'ubunturegular';
   font-size: rem(24px);
   text-transform: uppercase; }
 
 .hamburger__link:after {
+  position: absolute;
+  top: 100%;
+  right: 50%;
   content: "•";
   color: #fff;
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
   align-self: center; }
+  .hamburger__link:after :last-child {
+    display: none; }
