@@ -1790,7 +1790,7 @@ ul h1:hover {
   position: fixed;
   width: 100%;
   height: 100vh;
-  right: 0;
+  right: -100%;
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s; }
