@@ -1,0 +1,63 @@
+@charset "UTF-8";
+.hamburger-fullscreen {
+  background: rgba(47, 50, 52, 0.99);
+  position: fixed;
+  width: 100%;
+  right: -100%;
+  z-index: 2;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; }
+
+.container--hamburger {
+  width: 95%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%; }
+
+.hamburger__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: rem(10px); }
+
+.exit__cross {
+  width: rem(20px);
+  height: rem(20px);
+  fill: #c1c2c2; }
+
+.hamburger__list {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.hamburger__item {
+  margin-top: rem(40px); }
+
+.hamburger__link {
+  color: #fff;
+  font-family: 'ubunturegular';
+  font-size: rem(24px);
+  text-transform: uppercase; }
+
+.hamburger__link:after {
+  content: "•";
+  color: #fff;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center; }

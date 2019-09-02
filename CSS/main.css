@@ -513,9 +513,6 @@ h1 {
   -ms-flex-direction: row;
   flex-direction: row;
   white-space: nowrap; }
-  @media screen and (max-width: 768px) {
-    .navigation__list {
-      display: none; } }
 
 .navigation__item {
   display: -webkit-box;
@@ -1777,3 +1774,74 @@ ul h1:hover {
     -webkit-transform: rotate(-90deg);
     -ms-transform: rotate(-90deg);
     transform: rotate(-90deg); }
+
+.hamburger-fullscreen {
+  background: rgba(47, 50, 52, 0.99);
+  position: fixed;
+  width: 100%; }
+
+.container--hamburger {
+  width: 95%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%; }
+
+.hamburger__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 0.625rem; }
+
+.hamburger__exit {
+  border: none;
+  background: transparent; }
+
+.exit__cross {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: #c1c2c2; }
+
+.hamburger__list {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.hamburger__item {
+  margin-top: 2.5rem;
+  position: relative; }
+  .hamburger__item:first-child {
+    margin: 0; }
+
+.hamburger__link {
+  text-decoration: none;
+  color: #fff;
+  font-family: 'ubunturegular';
+  font-size: 1.5rem;
+  text-transform: uppercase; }
+
+.hamburger__link:after {
+  position: absolute;
+  top: 100%;
+  right: 50%;
+  content: "•";
+  color: #fff;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center; }
+  .hamburger__link:after :last-child {
+    display: none; }

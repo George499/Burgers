@@ -1,0 +1,60 @@
+.hamburger-fullscreen {
+    background: rgba(47, 50, 52, 0.99);  
+    position: fixed;
+    width: 100%;    
+    
+}
+.container--hamburger {
+    width: 95%;
+    flex-direction: column;
+    height: 100%;
+}
+.hamburger__header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: rem(10px);    
+}
+.hamburger__exit {
+    border: none;
+    background: transparent;
+}
+.exit__cross {
+    width: rem(20px);
+    height: rem(20px);
+    fill: #c1c2c2;    
+}
+.hamburger__list {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+.hamburger__item {    
+    margin-top: rem(40px);
+    position: relative;
+    &:first-child {
+        margin: 0;
+    }    
+}
+.hamburger__link {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'ubunturegular';
+    font-size: rem(24px);
+    text-transform: uppercase;
+}
+
+.hamburger__link:after { 
+        position: absolute;   
+        top: 100%;
+        right: 50%;
+        content: "•";
+        color: #fff;    
+        align-self: center;
+        :last-child {
+            display: none;
+        }
+    }
+    

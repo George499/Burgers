@@ -83,7 +83,8 @@ width: rem(100px)
     flex-direction: row;
     white-space: nowrap; 
     @include tablets {
-        display: none;
+        
+        
     }
 }
 
