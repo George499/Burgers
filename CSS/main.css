@@ -494,7 +494,9 @@ h1 {
       padding: 0 12%; } }
 
 .logo {
-  margin-right: 4.6875rem; }
+  margin-right: 4.6875rem;
+  position: relative;
+  z-index: 99; }
 
 .logo__image {
   height: 6.25rem;
@@ -1804,12 +1806,12 @@ ul h1:hover {
   height: 100%; }
 
 .hamburger__header {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -1817,6 +1819,7 @@ ul h1:hover {
   margin-top: 0.625rem; }
 
 .hamburger__exit {
+  padding-top: 1.875rem;
   border: none;
   background: transparent; }
   .hamburger__exit:hover {
