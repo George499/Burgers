@@ -222,6 +222,7 @@
         font-family: ubuntumedium;
     }
     .slider__scrolls {
+    -webkit-tap-highlight-color: transparent;
     position: absolute;
     
     display: flex;

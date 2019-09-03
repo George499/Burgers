@@ -57,7 +57,9 @@ header__menu__link.addEventListener ("click", function(){
 )
 
 let exit = document.querySelector("#exit");
-exit.addEventListener ("click", function(){
+
+exit.addEventListener ("click", function(e){    
+    e.preventDefault();
     hamburger__fullscreen.style.right = "-100%";
 } )
 
