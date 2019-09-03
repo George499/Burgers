@@ -323,6 +323,7 @@ html, body {
 body {
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
   -moz-osx-font-smoothing: grayscale;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -736,7 +737,8 @@ h1 {
   align-self: center;
   display: none;
   background: none;
-  border: none; }
+  border: none;
+  -webkit-tap-highlight-color: transparent; }
   @media screen and (max-width: 768px) {
     .header-menu-link {
       display: -webkit-inline-box;
@@ -1758,6 +1760,7 @@ ul h1:hover {
   font-family: ubuntumedium; }
 
 .slider__scrolls {
+  -webkit-tap-highlight-color: transparent;
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1821,7 +1824,8 @@ ul h1:hover {
 .hamburger__exit {
   padding-top: 1.875rem;
   border: none;
-  background: transparent; }
+  background: transparent;
+  outline: none; }
   .hamburger__exit:hover {
     background: none; }
 
