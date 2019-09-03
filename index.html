@@ -51,7 +51,7 @@
                     <button type="button" class="btn">
                     заказать
                 </button>
-                <a class="header-menu-link" href="">
+                <a class="header-menu-link" id="menulink" href="#">
                 <div class="header-menu-link__bars"></div>
             </a>
                 
@@ -83,7 +83,7 @@
         <svg class="scrolldown" viewBox="0 0 30 20" height="30" width="20"><use xlink="" href="images/SVG/sprite.svg#arrow"></use></svg>
     </section>
 
-            <section class="section we">
+            <section id="we" class="section we">
                 <div class="container we__container">
                   
                       <h1 class="we__title">
@@ -128,16 +128,83 @@
                 </div>
 
             </section>
-            <section class="burgers">
-
+            <section id="slider" class="section slider">                    
+                            <div class="container slider__container">
+                                <ul class="slider__list">
+                                    <li class="slider__item">
+                                        <div class="slider__item__left">
+                                            <div class="slider__icon"><svg class="slider__icon__sprite" viewBox="0 0 45 44"><use xlink="" href="images/SVG/sprite.svg#burger"></use></svg>
+                                                <div class="slider__icon__text">состав</div>
+                                                <div class="popup">                                                    
+                                                    <ul class="popup__list">                                                        
+                                                        <li class="popup__item">
+                                                            <div class="popup__img"><svg class="popup__sprite" viewBox="0 0 44 39"><use xlink="" href="images/SVG/sprite.svg#beef"></use></svg></div>
+                                                            <div class="popup__title">Говядина</div>
+                                                            <div class="popup__weight">300 г</div>
+                                                        </li>
+                                                        <li class="popup__item">
+                                                            <div class="popup__img"><svg class="popup__sprite" viewBox="0 0 48 30"><use xlink="" href="images/SVG/sprite.svg#loaf"></use></svg></div>
+                                                            <div class="popup__title">Булочки</div>
+                                                            <div class="popup__weight">100 г</div>
+                                                        </li>
+                                                        <li class="popup__item">
+                                                            <div class="popup__img"><svg class="popup__sprite" viewBox="0 0 38 38"><use xlink="" href="images/SVG/sprite.svg#green"></use></svg></div>
+                                                            <div class="popup__title">Зелень</div>
+                                                            <div class="popup__weight">70 г</div>
+                                                        </li>
+                                                        <li class="popup__item">
+                                                            <div class="popup__img"><svg class="popup__sprite" viewBox="0 0 40 43"><use xlink="" href="images/SVG/sprite.svg#sauce"></use></svg></div>
+                                                            <div class="popup__title">Соус</div>
+                                                            <div class="popup__weight">150 г</div>
+                                                        </li>
+                                                        <li class="popup__item">
+                                                            <div class="popup__img"><svg class="popup__sprite" viewBox="0 0 42 37"><use xlink="" href="images/SVG/sprite.svg#veg"></use></svg></div>
+                                                            <div class="popup__title">Овощи</div>
+                                                            <div class="popup__weight">200 г</div>
+                                                        </li>
+                                                        <li class="popup__item">
+                                                            <div class="popup__img"><svg class="popup__sprite" viewBox="0 0 38 34"><use xlink="" href="images/SVG/sprite.svg#cheese"></use></svg></div>
+                                                            <div class="popup__title">Сыр</div>
+                                                            <div class="popup__weight">80 г</div>
+                                                        </li>
+                
+                
+                                                    </ul>                
+                                                    
+                                
+                                                </div>
+                
+                                            </div>
+                                            <div class="slider__burger-photo"><img class="slider__burger__img" src="images/blackburger.png" alt="черный бургер"></div>
+                                            <div class="calories__icon"><svg class="calories__icon__sprite" viewBox="0 0 60 60"><use xlink="" href="images/SVG/sprite.svg#kkal"></use></svg>
+                                                <div class="calories__icon-text calories__icon-text--digits">1200</div>
+                                                <div class="calories__icon-text calories__icon-text--word">ккал</div> 
+                                            </div>
+                                        </div>
+                
+                
+                                        <div class="slider__item__right">
+                                            <h1 class="slider__title">dark beef burger</h1>
+                                            <p class="slider__item__desc"> Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</p>
+                                            <h1 class="slider__price"> <span class="slider__price slider__price--big">500</span> <span class="slider__price slider__price--small">рублей</span>
+                                                <button class="btn btn--slider">заказать</button></h1>
+                                        </div>
+                                    </li>  
+                                </ul>
+                                <div class="slider__scrolls">
+                                    <button class="slider__scroll"><svg class="scrollarrow scrollarrow--left" viewBox="0 0 30 20"><use xlink="" href="images/SVG/sprite.svg#arrow"></use></svg></button>
+                                    <button class="slider__scroll"><svg class="scrollarrow scrollarrow--right" viewBox="0 0 30 20"><use xlink="" href="images/SVG/sprite.svg#arrow"></use></svg></button>
+                                </div>
+                            </div>
+                            
             </section>
-            <section class="section team">
+            <section id="team" class="section team">
                 <div class="team__people">
                     <div class="container team__container">                    
                     <h1 class="team__title">команда</h1>
                     <ul class="accordion__team">
                     
-                        <li class="team__item">
+                        <li id="team__item" class="team__item">
                                 <h1 class="team__name">Дэниэл Редклиф</h1>
                                 <div class="team__info">    
                                 <div class="team__photo" style="background-image: url(images/photos/aphex.png)">   </div>
@@ -148,7 +215,7 @@
                                 </div>
                                 </div> 
                         </li>                        
-                        <li class="team__item team__item--active">
+                        <li id="team__item" class="team__item">
                             <h1 class="team__name">Ричард Джеймс</h1>
                             <div class="team__info">    
                             <div class="team__photo" style="background-image: url(images/photos/aphex.png)">   </div>
@@ -159,7 +226,7 @@
                             </div>
                             </div> 
                         </li>
-                        <li class="team__item">
+                        <li id="team__item" class="team__item">
                                 <h1 class="team__name">Джейк Финн</h1>
                                 <div class="team__info">    
                                 <div class="team__photo" style="background-image: url(images/photos/aphex.png)">   </div>
@@ -170,7 +237,7 @@
                                 </div>
                                 </div> 
                         </li>
-                        <li class="team__item">
+                        <li id="team__item" class="team__item">
                                     <h1 class="team__name">Николай Иванов</h1>
                                     <div class="team__info">    
                                     <div class="team__photo" style="background-image: url(images/photos/aphex.png)">   </div>
@@ -188,12 +255,12 @@
 
 
             </section>
-            <section class="section menu">
+            <section id="menu" class="section menu">
                 
                     <h1 class="menu__title">меню </h1>
                     <div class="menu__aside">
                             <ul class="menu__accordeon">
-                                <li class="menu__item menu__item--active">
+                                <li id="menu__item" class="menu__item">
                                     <button class="menu__button menu__button--first" type="button">
                                         <h1 class="menu__name">Для мясоедов</h1>
                                         </button>
@@ -204,7 +271,7 @@
                                           
                                          </div>  
                                 </li>                       
-                                <li class="menu__item">
+                                <li id="menu__item" class="menu__item">
                                     <button class="menu__button menu__button--second" type="button">
                                         <h1 class="menu__name">Вегетарианское</h1>
                                         </button>
@@ -215,7 +282,7 @@
                                           
                                          </div>  
                                 </li>                       
-                                <li class="menu__item">
+                                <li id="menu__item" class="menu__item">
                                     <button class="menu__button menu__button--third" type="button">
                                         <h1 class="menu__name">Диетическое</h1>
                                         </button>
@@ -235,7 +302,7 @@
 
 
             </section>
-            <section class="section reviews">
+            <section id="reviews" class="section reviews">
               
                 <ul class="reviews__list">
                     <li class="reviews__item" style="background-image: url(./images/photos/photo1.png)">
@@ -361,7 +428,7 @@
             
             </section>
                               
-            <section class="section form">
+            <section id="form" class="section form">
                             <div class="container form__container">
                               <h1 class="form__title">Закажите доставку</h1>
                               <div class="form__inputs">
@@ -449,10 +516,7 @@
                               </div>
                             </div>
             </section>
-
-            
-            
-            <section class="section contacts">
+            <section id="contacts" class="section contacts">
                     
                             <footer class="footer">
                                 <div class="container footer__container">
@@ -514,7 +578,47 @@
                 </li>
                 
                 
-            </ul>            
+            </ul>    
+              
+
     </div>
+    <section class="section hamburger-fullscreen" id="fullscreen">
+
+        <div class="container container--hamburger">
+
+            <div class="hamburger__header">
+               
+
+                <button id="exit" class="btn hamburger__exit"><svg class="exit__cross" viewBox="0 0 20 20"><use xlink="" href="images/SVG/sprite.svg#exit"></use></svg></button>
+            </div>            
+                <ul class="hamburger__list">
+                    <li class="hamburger__item">
+                        <a href="#we" class="hamburger__link">о нас</a>
+                    </li>
+                    <li class="hamburger__item">
+                        <a href="#slider" class="hamburger__link">бургеры</a>
+                    </li>
+                    <li class="hamburger__item">
+                        <a href="#team" class="hamburger__link">команда</a>
+                    </li>
+                    <li class="hamburger__item">
+                        <a href="#menu" class="hamburger__link">меню</a>
+                    </li>
+                    <li class="hamburger__item">
+                        <a href="#reviews" class="hamburger__link">отзывы</a>
+                    </li>
+                    <li class="hamburger__item">
+                        <a href="#" class="hamburger__link">как мы работаем</a>
+                    </li>
+                    <li class="hamburger__item">
+                        <a href="#contacts" class="hamburger__link">контакты</a>
+                    </li>
+                </ul>
+            
+        </div>
+
+    </section>  
+    
+    <script src="js/index.js"></script>
 </body>
 </html>

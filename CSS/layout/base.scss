@@ -15,8 +15,10 @@ body {
     
     line-height: 1.42;
     -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
     -moz-osx-font-smoothing: grayscale;
-    position: relative;    
+    display: flex;
+    flex-direction: column;    
     color: $green;
 }
 .subtitle {    
@@ -28,12 +30,9 @@ body {
 }
 
 .wrapper {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    
-    min-height: 100%;
-    
+    position: relative;    
+    width: 100%;    
+    min-height: 100%;    
 }
 
 table {
