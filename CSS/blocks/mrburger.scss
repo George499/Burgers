@@ -63,6 +63,8 @@
 
 .logo {
     margin-right: rem(75px);
+    position: relative;
+    z-index: 99;
 }
 .logo__image {
 height: rem(100px);
