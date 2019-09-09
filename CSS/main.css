@@ -880,6 +880,9 @@ h1 {
   .feat__desc {
     margin-left: 0.625rem; } }
 
+.reviews {
+  position: relative; }
+
 .section {
   height: 100vh;
   min-height: 40.625rem; }
@@ -1872,3 +1875,67 @@ ul h1:hover {
   font-family: 'ubunturegular';
   font-size: 1.5rem;
   text-transform: uppercase; }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(47, 50, 52, 0.7);
+  overflow: hidden;
+  display: none; }
+
+.overlay__popup {
+  background: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 35%;
+  min-height: 15.875rem; }
+
+.overlay__text {
+  padding: 3%;
+  font-family: 'gagalinregular';
+  font-size: 0.875rem;
+  text-align: left;
+  text-transform: uppercase;
+  line-height: 1.75rem;
+  color: #2f3234;
+  margin: 0;
+  font-style: "gagalinregular"; }
+  .overlay__text p {
+    text-transform: none;
+    font-family: "ubunturegular";
+    font-size: 14px;
+    font-weight: 300;
+    padding-top: 1.875rem;
+    color: #2f3234;
+    line-height: 24px; }
+
+.overlay__exit {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 15px 15px;
+  outline: none; }
+
+.overlay__exit__cross {
+  fill: #e45028;
+  height: 0.9375rem;
+  width: 0.9375rem; }

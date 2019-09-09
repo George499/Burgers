@@ -63,4 +63,32 @@ exit.addEventListener ("click", function(e){
     hamburger__fullscreen.style.right = "-100%";
 } )
 
+const reviews = document.querySelector(".reviews");
+const overlay = document.querySelector(".overlay");
+const popupText = document.querySelector(".overlay__text");
+
+
+reviews.addEventListener("click", e=> {
+    let elem = e.target;
+    if (elem.tagName === "BUTTON") {        
+        var modalText = elem.previousElementSibling.previousElementSibling.innerHTML + elem.previousElementSibling.innerHTML;         
+        popupText.innerHTML = modalText;
+        overlay.style.display = "block";
+    }
+
+    
+    document.addEventListener("keyup", e => {
+        let keyName = e.key;
+
+        if(keyName === "Escape") {
+            overlay.style.display = "none"
+        }
+        
+    })
+    let overlayExit = document.querySelector(".overlay__exit");
+    overlayExit.addEventListener("click", e => {
+        e.preventDefault();
+        overlay.style.display = "none"
+    })
+});
 
