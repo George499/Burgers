@@ -28,6 +28,8 @@
     align-items: center;
     height: 100%;
     padding: rem(90px) 0rem;
+    min-width: 100%;
+    overflow: hidden;
     @include tablets {
         flex-direction: column;
     }

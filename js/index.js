@@ -23,6 +23,41 @@ for (let i = 0; i < menu__item.length; i++) {
     })
 }
 
+
+let arrowLeft = document.querySelector(".scrollarrow--left");
+let arrowRight = document.querySelector(".scrollarrow--right");
+let slidersList = document.querySelector(".slider__list");
+let slides = document.querySelector(".slider__item");
+
+
+
+
+
+
+
+arrowLeft.addEventListener('click', function() {
+    let activeSlide = ('.slider-card--active');
+    let reqItem = activeSlide.prev();
+    let reqIndex = reqItem.index();
+
+    if (reqItem.length) {
+
+        slidersList.animate({ "left": -reqIndex * 100 + '%' }, 300, function() { activeSlide.removeClass('slider-card--active'), reqItem.addClass('slider-card--active') })
+    }
+});
+
+arrowRight.addEventListener('click', function() {
+    let activeSlide = ('.slider-card--active');
+    let reqItem = activeSlide.next();
+    let reqIndex = reqItem.index();
+
+    if (reqItem.length) {
+
+        slidersList.animate({ "left": -reqIndex * 100 + '%' }, 300, function() { activeSlide.removeClass('slider-card--active'), reqItem.addClass('slider-card--active') })
+    }
+});
+
+
 let team__item = document.querySelectorAll(".team__item");
 let team = document.querySelector(".team__people");
 
@@ -91,4 +126,6 @@ reviews.addEventListener("click", e=> {
         overlay.style.display = "none"
     })
 });
+
+
 
