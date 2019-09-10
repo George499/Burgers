@@ -21,6 +21,7 @@
     display: flex;
     height: 100%;
     align-items: center;
+    width: rem(940px);
     
 }
 .slider__item {
@@ -28,11 +29,15 @@
     align-items: center;
     height: 100%;
     padding: rem(90px) 0rem;
-    min-width: 100%;
+    min-width: 940px;
     overflow: hidden;
+    
+    
+    
     @include tablets {
         flex-direction: column;
     }
+    
 }
 .slider__item__left {
     position: relative;
@@ -143,10 +148,11 @@
     }
     }
 .slider__burger__img {
-    @include tablets {
-        max-width: 100%;
-        height: auto;
-      }
+    height: rem(329px);
+    width: rem(505px);
+    max-width: 100%;
+    height: auto;
+   
 }
 .calories__icon {
     position: absolute;

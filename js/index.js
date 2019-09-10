@@ -24,38 +24,35 @@ for (let i = 0; i < menu__item.length; i++) {
 }
 
 
-let arrowLeft = document.querySelector(".scrollarrow--left");
-let arrowRight = document.querySelector(".scrollarrow--right");
-let slidersList = document.querySelector(".slider__list");
-let slides = document.querySelector(".slider__item");
-
-
-
-
-
-
-
-arrowLeft.addEventListener('click', function() {
-    let activeSlide = ('.slider-card--active');
-    let reqItem = activeSlide.prev();
-    let reqIndex = reqItem.index();
-
-    if (reqItem.length) {
-
-        slidersList.animate({ "left": -reqIndex * 100 + '%' }, 300, function() { activeSlide.removeClass('slider-card--active'), reqItem.addClass('slider-card--active') })
+const left = document.querySelector(".scrollarrow--left");
+const right = document.querySelector(".scrollarrow--right");
+const slidersList = document.querySelector(".slider__list");
+const slides = document.querySelectorAll(".slider__item");
+const currentSlide = 0
+right.addEventListener("click", function(e) {
+    for (let i = 0; i < menu__item.length; i++) {
+       slides[i].classList.remove("menu__item--active");
     }
-});
-
-arrowRight.addEventListener('click', function() {
-    let activeSlide = ('.slider-card--active');
-    let reqItem = activeSlide.next();
-    let reqIndex = reqItem.index();
-
-    if (reqItem.length) {
-
-        slidersList.animate({ "left": -reqIndex * 100 + '%' }, 300, function() { activeSlide.removeClass('slider-card--active'), reqItem.addClass('slider-card--active') })
+    })
+    
+    for (let i = 0; i < menu__item.length; i++) {
+        left[i].addEventListener("click", function(e) {
+            e.preventDefault();
+            
+            if (slidersList.classList.contains('slider__item--active')) {
+                slidersList.classList.remove("slider__item--active")
+            }
+            else {
+                for (let i = 0; i < menu__item.length; i++) {
+                    slidersList.classList.remove('slider__item--active');
+                }
+                slidersList.classList.add('slider__item--active')
+            }
+        })
     }
-});
+
+
+
 
 
 let team__item = document.querySelectorAll(".team__item");

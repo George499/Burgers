@@ -988,8 +988,7 @@ button {
   cursor: pointer;
   height: 2.1875rem;
   width: 6.0625rem;
-  border: 0;
-  outline: none; }
+  border: 0; }
 
 .btn:hover {
   background: #c1401e;
@@ -1520,7 +1519,8 @@ ul h1:hover {
   height: 100%;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  width: 58.75rem; }
 
 .slider__item {
   display: -webkit-box;
@@ -1530,7 +1530,9 @@ ul h1:hover {
   -ms-flex-align: center;
   align-items: center;
   height: 100%;
-  padding: 5.625rem 0rem; }
+  padding: 5.625rem 0rem;
+  min-width: 940px;
+  overflow: hidden; }
   @media screen and (max-width: 768px) {
     .slider__item {
       -webkit-box-orient: vertical;
@@ -1675,10 +1677,11 @@ ul h1:hover {
       max-width: 100%;
       padding-top: 60px; } }
 
-@media screen and (max-width: 768px) {
-  .slider__burger__img {
-    max-width: 100%;
-    height: auto; } }
+.slider__burger__img {
+  height: 20.5625rem;
+  width: 31.5625rem;
+  max-width: 100%;
+  height: auto; }
 
 .calories__icon {
   position: absolute;
