@@ -125,5 +125,69 @@ reviews.addEventListener("click", e=> {
     })
 });
 
+const myForm = document.querySelector(".form__elem")
+const sendButton = document.querySelector(".btn--send")
+
+
+sendButton.addEventListener ("click", e => {
+    e.preventDefault();
+    if (validateForm(myForm)) {
+        const data = {
+            apartment: myForm.elements.apartment.value,
+            building: myForm.elements.building.value,
+            comment: myForm.elements.comment.value,
+            floor: myForm.elements.floor.value,
+            home: myForm.elements.home.value,
+            name: myForm.elements.name.value,
+            phone: myForm.elements.phone.value,
+            question1: myForm.elements.question1.checked,
+            question2: myForm.elements.question2.checked,
+            question3: myForm.elements.question3.checked,
+            street: myForm.elements.street.value
+        }
+        
+        const xhr = new XMLHttpRequest();
+        xhr.responseType = "json";
+        xhr.open("POST", "https://webdev-api.loftschool.com/sendmail");
+        xhr.send(JSON.stringify.data)
+        xhr.addEventListener("load", () => {
+            if(xhr.response.status) {
+        const message = JSON.parse(xhr.responseText);
+        for (const message) {
+            const messageDom = createMessageDOM(message);
+            myForm.appendChild(message);
+                }                  
+            };            
+        })        
+    }
+});
+
+function validateForm(form) {
+    let valid = true;
+
+    if(!validateField(myForm.elements.name)) {
+        valid = false;
+    }
+
+    if(!validateField(myForm.elements.phone)) {
+        valid = false;
+    }
+
+    if(!validateField(myForm.elements.comment)) {
+        valid = false;
+    }
+
+    return valid;
+}
+
+function validateField(field) {
+    
+        field.nextElementSibling.textContent = field.validationMessage;
+        return field.checkValidity(); 
+    }
+
+
+
+
 
 

@@ -679,58 +679,70 @@
                                     <div class="form__row">
                                       <label class="form__block">
                                         <div class="form__block-title">Имя</div>
-                                        <input type="text" class="form__input">
+                                        <input type="text" class="form__input" name="name" required>
+                                        <div class="error"></div>
                                       </label>
                                         <label class="form__block">
                                           <div class="form__block-title">Телефон</div>
-                                          <input type="text" class="form__input">
+                                          <input type="text" class="form__input" name="phone" required>
+                                          <div class="error"></div>
                                       </label>
                                     </div>
                                     <div class="form__row">
                                       <label class="form__block">
                                         <div class="form__block-title">Улица</div>
-                                        <input type="text" class="form__input">
+                                        <input type="text" class="form__input" name="street">
+                                        <div class="error"></div>
                                       </label>
                                     </div>
                                     <div class="form__row">
                                       <label class="form__block">
                                         <div class="form__block-title">Дом</div>
-                                        <input type="text" class="form__input">
+                                        <input type="text" class="form__input" name="home">
+                                        <div class="error"></div>
                                       </label>
                                         <label class="form__block">
                                           <div class="form__block-title">Корпус</div>
-                                          <input type="text" class="form__input">
+                                          <input type="text" class="form__input" name="building">
+                                          <div class="error"></div>
                                       </label>
                                           <label class="form__block">
                                             <div class="form__block-title">Квартира</div>
-                                            <input type="text" class="form__input">
+                                            <input type="text" class="form__input" name="apartment">
+                                            <div class="error"></div>
                                       </label>
                                           <label class="form__block form__block--hidden">
                                             <div class="form__block-title">Этаж</div>
-                                            <input type="text" class="form__input">
+                                            <input type="text" class="form__input" name="floor">
+                                            <div class="error"></div>
                                       </label>
                                     </div>
                         
                                   </div>
                                   <div class="form__column">
-                                    <div class="form__row">
+                                    <div class="form__row form__row--comment">
                                             <label class="form__block">
                                                     <div class="form__block-title">Комментарий</div>       
-                                        <textarea class="form__input form__input--textarea"></textarea></label>
+                                        <textarea class="form__input form__input--textarea" name="comment" required></textarea>
+                                        <div class="error"></div>
+                                    </label>
+                                        
                                     </div>  
                                     <div class="form__buttons">                                  
                                     <div class="form__row ">
                                             <label class="form__block form__block--radiocheck">
                                                     
                                                     <label class=" form__block-title form__radio">
-                                                        <input name="question" class="form__trueradio" type="radio">
+                                                        <input name="question1" class="form__trueradio" type="radio">
+                                                       
                                                          <span class="form__fakeradio"></span>
                                                         <span class="form__label form__label--radio">Потребуется сдача</span></label>
                                             </label>  
                                             <label class="form__block form__block--radiocheck">
                                                     
                                                     <label class=" form__block-title form__radio">
-                                                        <input name="question" class="form__trueradio" type="radio">
+                                                        <input name="question2" class="form__trueradio" type="radio">
+                                                        
                                                          <span class="form__fakeradio"></span>
                                                         <span class="form__label form__label--radio">Оплата по карте</span></label>
                                             </label>
@@ -740,7 +752,8 @@
                                             <label class="form__block form__block--radiocheck">
                                                     
                                                         <label class=" form__block-title form__radio">
-                                                            <input name="question" class="form__trueradio" type="checkbox">
+                                                            <input name="question3" class="form__trueradio" type="checkbox">
+                                                            
                                                              <span class="form__fakeradio form__fakeradio--checkbox">
                                                             </span><span class="form__label form__label--radio">Не перезванивать</span>
                                                         </label>
@@ -748,7 +761,7 @@
                                     </div>  
                                     <div class="form__row ">
                                         <label class="form__block">
-                                                <button type="button" class="btn">заказать </button>
+                                                <button type="button" class="btn btn--send">заказать </button>
                                                 <button type="button" class="btn btn--reset" type="reset">очистить</button>
                                         </label>
                                     </div>  

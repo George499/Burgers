@@ -48,6 +48,9 @@ margin-right: rem(20px);
 .form__row {
     display: flex;
     margin-top: rem(20px);
+    &--comment {
+        flex-direction: column;
+    }
 }
 
 .form__block {
