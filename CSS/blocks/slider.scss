@@ -20,9 +20,11 @@
     justify-content: center;
     display: flex;
     height: 100%;
-    align-items: center;
-    width: rem(940px);
-    
+    align-items: center;    
+    width: 100%;
+    position: relative;
+    left: 1880px;
+    right: 0;
 }
 .slider__item {
     display: flex;
@@ -30,8 +32,7 @@
     height: 100%;
     padding: rem(90px) 0rem;
     min-width: 940px;
-    overflow: hidden;
-    
+    overflow: hidden;   
     
     
     @include tablets {
@@ -150,8 +151,9 @@
 .slider__burger__img {
     height: rem(329px);
     width: rem(505px);
-    max-width: 100%;
-    height: auto;
+    height: 100%;
+    width: 100%;
+      
    
 }
 .calories__icon {
@@ -191,14 +193,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    @include tablets {
-        width: 80%;
-    }
-    @include phones {
-        width: 100%
-    }
-    }
-
+    
+}
 .slider__item__desc {
     font-family: 'ubuntulight';
     color: #fff;

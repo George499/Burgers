@@ -26,30 +26,31 @@ for (let i = 0; i < menu__item.length; i++) {
 
 const left = document.querySelector(".scrollarrow--left");
 const right = document.querySelector(".scrollarrow--right");
-const slidersList = document.querySelector(".slider__list");
+const sliderList = document.querySelector(".slider__list");
 const slides = document.querySelectorAll(".slider__item");
-const currentSlide = 0
-right.addEventListener("click", function(e) {
-    for (let i = 0; i < menu__item.length; i++) {
-       slides[i].classList.remove("menu__item--active");
-    }
-    })
+const computed = getComputedStyle(sliderList);
+
+
+right.addEventListener('click', e => {
+    e.preventDefault();
+    let currentLeft = parseInt(computed.left)
+         if (currentLeft > -1880) {
+        sliderList.style.left = currentLeft - 940 + "px";
+         }
+
+         
+         
+        
     
-    for (let i = 0; i < menu__item.length; i++) {
-        left[i].addEventListener("click", function(e) {
-            e.preventDefault();
-            
-            if (slidersList.classList.contains('slider__item--active')) {
-                slidersList.classList.remove("slider__item--active")
-            }
-            else {
-                for (let i = 0; i < menu__item.length; i++) {
-                    slidersList.classList.remove('slider__item--active');
-                }
-                slidersList.classList.add('slider__item--active')
-            }
-        })
-    }
+});
+left.addEventListener("click", e => {
+    e.preventDefault();
+    let currentLeft = parseInt(computed.left)   
+    if (currentLeft < 1880)      
+    sliderList.style.left = currentLeft + 940 + "px";
+        
+})
+
 
 
 
