@@ -133,7 +133,7 @@ const sendButton = document.querySelector(".btn--send")
 
 sendButton.addEventListener ("click", e => {
     e.preventDefault();
-    
+    if (validateForm(myForm)) {     
         const data = {
             apartment: myForm.elements.apartment.value,
             building: myForm.elements.building.value,
@@ -155,18 +155,32 @@ sendButton.addEventListener ("click", e => {
     formData.append("to", "gi.32@gmail.com"); 
     var xhr = new XMLHttpRequest();
     xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
-    xhr.send(formData);  
-
+    xhr.send(formData); 
+    xhr.responseType = "json";
     xhr.addEventListener("load", function() {
        
         if (xhr.response.status) {
-            var formOverlay = document.querySelector(".overlay");
-            formOverlay.style.display = 'flex';
-            popupText.textContent = 'Сообщение отправлено';    
-            form.reset();
-        } 
+           
+            let overlayForm = document.querySelector(".overlay--modal");
+            overlayForm.style.display = "block";
+            let popupText = document.querySelector(".overlay__text--modal")
+            popupText.innerHTML = "Заказ отправлен";    
+            myForm.reset();
+            document.addEventListener("keyup", e => {
+            let keyName = e.key;        
+            if(keyName === "Escape") {
+            overlayForm.style.display = "none"
+            }                
+        })
+        let overlayExit = document.querySelector(".overlay__exit--modal");
+        overlayExit.addEventListener("click", e => {
+        e.preventDefault();
+        overlayForm.style.display = "none"
+        })
+    } 
     })
-
+    }
+});
     function validateForm(form) {
         let valid = true;
     
@@ -192,7 +206,7 @@ sendButton.addEventListener ("click", e => {
         }
     
     
-});
+
 
 
 

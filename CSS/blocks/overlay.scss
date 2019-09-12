@@ -6,6 +6,8 @@
     background: rgba(47, 50, 52, .7);
     overflow: hidden;
     display: none;
+    justify-content: space-between;
+    
 }
 
 .overlay__popup {
@@ -25,6 +27,12 @@
 padding: 3%;
 @include title ($green, rem(14px), rem(28px), 0);
 font-style: "gagalinregular";
+&--modal {
+    align-self: center;
+    margin: 0 auto;
+    padding-left: rem(55px);
+    font-size: rem(23px)
+}
 
 p {
     text-transform: none;
