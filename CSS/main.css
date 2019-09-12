@@ -1353,17 +1353,19 @@ ul h1:hover {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center; }
-  .form .form__container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column; }
-  .form .btn {
-    margin-right: 1.25rem; }
-    .form .btn:last-child {
-      margin-right: 0; }
-    .form .btn--reset {
-      background: transparent; }
+
+.form__container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.btn {
+  margin-right: 1.25rem; }
+  .btn:last-child {
+    margin-right: 0; }
+  .btn--reset {
+    background: transparent; }
 
 .form__inputs {
   display: -webkit-box;

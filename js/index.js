@@ -125,13 +125,15 @@ reviews.addEventListener("click", e=> {
     })
 });
 
+
+
 const myForm = document.querySelector(".form__elem")
 const sendButton = document.querySelector(".btn--send")
 
 
 sendButton.addEventListener ("click", e => {
     e.preventDefault();
-    if (validateForm(myForm)) {
+    
         const data = {
             apartment: myForm.elements.apartment.value,
             building: myForm.elements.building.value,
@@ -145,49 +147,56 @@ sendButton.addEventListener ("click", e => {
             question3: myForm.elements.question3.checked,
             street: myForm.elements.street.value
         }
-        
-        const xhr = new XMLHttpRequest();
-        xhr.responseType = "json";
-        xhr.open("POST", "https://webdev-api.loftschool.com/sendmail");
-        xhr.send(JSON.stringify.data)
-        xhr.addEventListener("load", () => {
-            if(xhr.response.status) {
-        const message = JSON.parse(xhr.responseText);
-        for (const message) {
-            const messageDom = createMessageDOM(message);
-            myForm.appendChild(message);
-                }                  
-            };            
-        })        
+       
+    const formData = new FormData(myForm);
+    formData.append("name", myForm.elements.name.value);
+    formData.append("phone", myForm.elements.phone.value);
+    formData.append("comment", myForm.elements.comment.value);
+    formData.append("to", "gi.32@gmail.com"); 
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+    xhr.send(formData);  
+
+    xhr.addEventListener("load", function() {
+       
+        if (xhr.response.status) {
+            var formOverlay = document.querySelector(".overlay");
+            formOverlay.style.display = 'flex';
+            popupText.textContent = 'Сообщение отправлено';    
+            form.reset();
+        } 
+    })
+
+    function validateForm(form) {
+        let valid = true;
+    
+        if(!validateField(myForm.elements.name)) {
+            valid = false;
+        }
+    
+        if(!validateField(myForm.elements.phone)) {
+            valid = false;
+        }
+    
+        if(!validateField(myForm.elements.comment)) {
+            valid = false;
+        }
+    
+        return valid;
     }
+    
+    function validateField(field) {
+        
+            field.nextElementSibling.textContent = field.validationMessage;
+            return field.checkValidity(); 
+        }
+    
+    
 });
 
-function validateForm(form) {
-    let valid = true;
 
-    if(!validateField(myForm.elements.name)) {
-        valid = false;
-    }
 
-    if(!validateField(myForm.elements.phone)) {
-        valid = false;
-    }
 
-    if(!validateField(myForm.elements.comment)) {
-        valid = false;
-    }
 
-    return valid;
-}
-
-function validateField(field) {
+        
     
-        field.nextElementSibling.textContent = field.validationMessage;
-        return field.checkValidity(); 
-    }
-
-
-
-
-
-
