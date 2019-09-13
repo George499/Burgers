@@ -37,18 +37,20 @@ right.addEventListener('click', e => {
          if (currentLeft > -1880) {
         sliderList.style.left = currentLeft - 940 + "px";
          }
-
-         
-         
-        
-    
+         else {
+        sliderList.style.left = currentLeft + 940*4 + "px";
+         }
 });
 left.addEventListener("click", e => {
     e.preventDefault();
     let currentLeft = parseInt(computed.left)   
-    if (currentLeft < 1880)      
-    sliderList.style.left = currentLeft + 940 + "px";
-        
+    if (currentLeft < 1880)  {    
+    sliderList.style.left = currentLeft + 940 + "px";        
+}
+    else {
+        sliderList.style.left = currentLeft - 940*4 + "px";
+    }
+
 })
 
 
@@ -61,6 +63,7 @@ let team = document.querySelector(".team__people");
 
 
 team.addEventListener("click", function(e) {
+    e.preventDefault();
     for (let i = 0; i < team__item.length; i++) {
         team__item[i].classList.remove("team__item--active");
     }
@@ -70,14 +73,15 @@ team.addEventListener("click", function(e) {
         team__item[i].addEventListener("click", function(e) {
             e.preventDefault();
             e.stopPropagation();
+            
             if (team__item[i].classList.contains('team__item--active')) {
-                team__item[i].classList.remove("team__item--active")
+                team__item[i].classList.remove("team__item--active")                
             }
             else {
                 for (let i = 0; i < team__item.length; i++) {
                team__item[i].classList.remove('team__item--active');
                 }
-                team__item[i].classList.add('team__item--active')
+                team__item[i].classList.add('team__item--active')                
             }
         })
     }
@@ -105,8 +109,9 @@ reviews.addEventListener("click", e=> {
     let elem = e.target;
     if (elem.tagName === "BUTTON") {        
         var modalText = elem.previousElementSibling.previousElementSibling.innerHTML + elem.previousElementSibling.innerHTML;         
-        popupText.innerHTML = modalText;
+        popupText.innerHTML = modalText;        
         overlay.style.display = "block";
+        document.body.style.overflow = 'hidden';        
     }
 
     
@@ -115,6 +120,7 @@ reviews.addEventListener("click", e=> {
 
         if(keyName === "Escape") {
             overlay.style.display = "none"
+            document.body.style.overflow = 'inherit';
         }
         
     })
@@ -122,6 +128,7 @@ reviews.addEventListener("click", e=> {
     overlayExit.addEventListener("click", e => {
         e.preventDefault();
         overlay.style.display = "none"
+        document.body.style.overflow = 'inherit';
     })
 });
 
@@ -129,6 +136,26 @@ reviews.addEventListener("click", e=> {
 
 const myForm = document.querySelector(".form__elem")
 const sendButton = document.querySelector(".btn--send")
+
+    myForm.addEventListener("keydown", e => {
+    // if (e.target.name.contains ("apartment") || event.target.name.contains ('building') || event.target.name.contains ('phone') || event.target.name.contains ('floor') || event.target.name.contains ('home')) {
+    if (e.target.name.contains ('phone')) {
+    let isDigit = false;
+    let isDash = false;
+    let isControl = false;
+
+    if (e.key >= 0 || e.key <= 9) {
+        isDigit = true
+    }
+    if (e.key == "ArrowLeft" || e.key == "ArrowRight" || e.key == "Backspace") {
+        isControl = true
+    }
+    if (!isDigit && !isControl) {
+        e.preventDefault();
+    }
+    }
+})
+
 
 
 sendButton.addEventListener ("click", e => {
@@ -163,6 +190,7 @@ sendButton.addEventListener ("click", e => {
            
             let overlayForm = document.querySelector(".overlay--modal");
             overlayForm.style.display = "block";
+            document.body.style.overflow = 'hidden';
             let popupText = document.querySelector(".overlay__text--modal")
             popupText.innerHTML = "Заказ отправлен";    
             myForm.reset();
@@ -170,12 +198,14 @@ sendButton.addEventListener ("click", e => {
             let keyName = e.key;        
             if(keyName === "Escape") {
             overlayForm.style.display = "none"
+            
             }                
         })
         let overlayExit = document.querySelector(".overlay__exit--modal");
         overlayExit.addEventListener("click", e => {
         e.preventDefault();
         overlayForm.style.display = "none"
+        document.body.style.overflow = 'inherit';
         })
     } 
     })
