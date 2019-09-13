@@ -139,7 +139,7 @@ const sendButton = document.querySelector(".btn--send")
 
     
     myForm.addEventListener("keydown", e => {    
-    if (e.target.name == 'phone'  || e.target.name == 'apartment' || e.target.name == 'building' || e.target.name == 'floor' || e.target.name == 'home') {
+    if (e.target.name == 'phone'  || e.target.name == 'apartment' || e.target.name == 'floor' ) {
     let isDigit = false;
     let isDash = false;
     let isControl = false;
