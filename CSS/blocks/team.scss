@@ -4,8 +4,6 @@
     
 }
 
-
-
 .team__name {
     font-size: rem(14px);
     color: #ffffff;
@@ -21,11 +19,14 @@ ul h1:hover {
 }
 .team__container {
     flex-direction: column;
+    height: 100%;
+    justify-content: center;
 }
 
 
 .accordion__team {
 width: 100%;
+height: 38%;
 max-width: rem(600px);
 min-height: 0;
 display: flex;
@@ -106,6 +107,7 @@ margin-bottom: 0;
     .team__item {
         margin-bottom: rem(35px);
         position: relative;
+        
     }
     .team__info {
         display: flex;

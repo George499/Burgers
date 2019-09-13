@@ -137,9 +137,9 @@ reviews.addEventListener("click", e=> {
 const myForm = document.querySelector(".form__elem")
 const sendButton = document.querySelector(".btn--send")
 
-    myForm.addEventListener("keydown", e => {
-    // if (e.target.name.contains ("apartment") || event.target.name.contains ('building') || event.target.name.contains ('phone') || event.target.name.contains ('floor') || event.target.name.contains ('home')) {
-    if (e.target.name.contains ('phone')) {
+    
+    myForm.addEventListener("keydown", e => {    
+    if (e.target.name == 'phone'  || e.target.name == 'apartment' || e.target.name == 'building' || e.target.name == 'floor' || e.target.name == 'home') {
     let isDigit = false;
     let isDash = false;
     let isControl = false;
