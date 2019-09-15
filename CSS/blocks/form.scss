@@ -4,6 +4,9 @@ color: #fff;
 display: flex;
 flex-direction: column;
 justify-content: center;
+position: relative;
+}
+
 .form__container {
     flex-direction: column;
 }
@@ -16,7 +19,7 @@ margin-right: rem(20px);
     background: transparent;
 }
 }
-}
+
 
 .form__inputs {
     display: flex;
@@ -48,6 +51,9 @@ margin-right: rem(20px);
 .form__row {
     display: flex;
     margin-top: rem(20px);
+    &--comment {
+        flex-direction: column;
+    }
 }
 
 .form__block {
