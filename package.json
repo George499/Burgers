@@ -6,6 +6,19 @@
   "dependencies": {
     "normalize.css": "^8.0.1"
   },
+  "browserslist": [
+    "> 1%",
+    "ie >= 8",
+    "edge >= 15",
+    "ie_mob >= 10",
+    "ff >= 45",
+    "chrome >= 45",
+    "safari >= 7",
+    "opera >= 23",
+    "ios >= 7",
+    "android >= 4",
+    "bb >= 10"
+  ],
   "devDependencies": {
     "@babel/core": "^7.6.0",
     "@babel/preset-env": "^7.6.0",
@@ -15,7 +28,10 @@
     "gulp-babel": "^8.0.0",
     "gulp-clean-css": "^4.2.0",
     "gulp-concat": "^2.6.1",
+    "gulp-css-url-adjuster": "^0.2.3",
+    "gulp-css-url-fix": "0.0.1",
     "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-modify-css-urls": "^2.0.0",
     "gulp-px-to-rem": "^1.0.4",
     "gulp-rm": "^2.0.0",
     "gulp-sass": "^4.0.2",

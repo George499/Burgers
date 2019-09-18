@@ -21,17 +21,17 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 35%;
-    min-height: rem(254px);
+    min-height: 254px;
 }
 .overlay__text {
 padding: 3%;
-@include title ($green, rem(14px), rem(28px), 0);
+@include title ($green, 14px, 28px, 0);
 font-style: "gagalinregular";
 &--modal {
     align-self: center;
     margin: 0 auto;
-    padding-left: rem(55px);
-    font-size: rem(23px)
+    padding-left: 55px;
+    font-size: 23px
 }
 
 p {
@@ -39,7 +39,7 @@ p {
     font-family: "ubunturegular";
     font-size: 14px;
     font-weight: 300;
-    padding-top: rem(30px);
+    padding-top: 30px;
      
     color: $green;
     line-height: 24px;
@@ -56,7 +56,7 @@ p {
 }
 .overlay__exit__cross {
     fill: $flame;
-    height: rem(15px);
-    width: rem(15px);
+    height: 15px;
+    width: 15px;
     
 }

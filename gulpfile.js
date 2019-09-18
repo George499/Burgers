@@ -3,7 +3,7 @@ const rm = require("gulp-rm")
 const sass = require('gulp-sass');
 const concat = require('gulp-concat');
 const browserSync = require('browser-sync').create();
-const reload = browserSync.reload
+const reload = browserSync.reload;
 const sassGlob = require('gulp-sass-glob');
 const autoprefixer = require('gulp-autoprefixer');
 const px2rem = require('gulp-smile-px2rem');
@@ -12,6 +12,8 @@ const cleanCSS = require('gulp-clean-css');
 const sourcemaps = require('gulp-sourcemaps');
 const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
+
+
 
 
 sass.compiler = require('node-sass');
@@ -38,19 +40,19 @@ task("styles", () => {
         .pipe(sassGlob())
         .pipe(sass().on('error', sass.logError))
         .pipe(px2rem())
-        .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
-            cascade: false
-        }))
+        // .pipe(autoprefixer({
+        //     browsers: ['last 2 versions'],
+        //     cascade: false
+        // }))
         // .pipe(gcmq())
-        .pipe(cleanCSS({ compatibility: 'ie8' }))        
+        .pipe(cleanCSS({ compatibility: 'ie8' }))
         .pipe(sourcemaps.write())
         .pipe(dest('dist'));
 })
 task('scripts', () => {
     return src('js/index.js')
         .pipe(sourcemaps.init())
-        .pipe(concat('index.js', {newLine: ';'}))
+        .pipe(concat('index.js', { newLine: ';' }))
         .pipe(babel({
             presets: ['@babel/env']
         }))
