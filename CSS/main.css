@@ -1978,3 +1978,130 @@ ul h1:hover {
   fill: #e45028;
   height: 0.9375rem;
   width: 0.9375rem; }
+
+.video {
+  background: url(../../images/video-background.png) center center/cover no-repeat;
+  position: relative;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .video h1 {
+    color: #2f3234; }
+
+.video__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 100%; }
+
+.player {
+  width: 100%; }
+
+.c-player {
+  width: 100%;
+  max-width: 660px;
+  position: relative;
+  height: 45%; }
+
+.controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  background: #3e3e3e;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.duration {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-right: 5px; }
+
+.buttons button {
+  background: none;
+  border: 0;
+  outline: 0;
+  cursor: pointer; }
+
+.buttons button:before {
+  content: url(/images/toolbar_play.png);
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  font-size: 28px;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased; }
+
+.buttons button.play:before {
+  content: ""; }
+
+.buttons button.pause:before {
+  content: "\f28b"; }
+
+.duration {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1; }
+
+.bar {
+  width: 70%;
+  height: 4px;
+  border-radius: 1px;
+  background: #626262;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1; }
+  .bar .sound {
+    width: 100%; }
+
+.juice {
+  height: 10px;
+  width: 100px;
+  background-color: azure; }
+
+.sound {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 5px; }
+
+.sound__img {
+  padding-right: 5px; }
+
+.sound__volume {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding-right: 5px; }

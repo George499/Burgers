@@ -352,12 +352,38 @@ sendButton.addEventListener ("click", e => {
             return field.checkValidity(); 
         }
     
-    
+// получаем все элементы
+var video = document.getElementsByClassName('player'),
+playBtn = document.getElementsByClassName('play-pause'),
+vidControls = document.getElementsByClassName('controls'),
+volumeControl = document.getElementById('volume'),
+timePicker = document.getElementById('timer');
 
 
+// запускам или останавливаем воспроизведение
+playBtn.addEventListener('click', function (e) {
+    e.target
+if (video.paused) {
+    video.play();
+} else {
+    video.pause();
+}
+}, 
+false);
 
 
+volumeControl.addEventListener('input', function () {
+
+video.volume = volumeControl.value;
+}, false);
+
+video.addEventListener('ended', function () {
+video.currentTime = 0;
+}, false);
+
+video.addEventListener('timeupdate', function () {
+timePicker.innerHTML = secondsToTime(videoEl.currentTime);
+}, false);
 
 
-        
     
