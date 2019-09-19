@@ -334,6 +334,14 @@ body {
   flex-direction: column;
   color: #2f3234; }
 
+.maincontent {
+  height: 100%;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  -o-transition: transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s; }
+
 .subtitle {
   font-family: 'lifehackmedium';
   font-size: 1.5rem;
@@ -356,7 +364,8 @@ body {
 .wrapper {
   position: relative;
   width: 100%;
-  min-height: 100%; }
+  height: 100%;
+  overflow: hidden; }
 
 table {
   border-collapse: collapse;
@@ -699,7 +708,7 @@ button {
     .fixed-menu {
       display: none; } }
 
-.fixed-menu__item--current .fixed-menu__dot {
+.fixed-menu__item.active .fixed-menu__dot {
   border: solid #fff 0.0625rem; }
 
 .fixed-menu__dot {
