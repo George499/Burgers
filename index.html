@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8">    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="CSS/main.css" class="rel"> 
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=a071233a-e16e-42b6-9971-43c85214e736&lang=ru_RU" type="text/javascript">
+    </script>
     <title>Burgers</title>
 </head>
 <body>
     <div class="wrapper">
-        <div class="maincontent">
-        
+        <div class="maincontent">        
         
     <section class="section mrburger active">   
          <header class="header">    
@@ -84,7 +85,7 @@
         <svg class="scrolldown" viewBox="0 0 30 20" height="30" width="20"><use xlink="" href="images/SVG/sprite.svg#arrow"></use></svg>
     </section>
 
-            <section id="we" class="section we">
+    <section id="we" class="section we">
                 <div class="container we__container">
                   
                       <h1 class="we__title">
@@ -128,8 +129,8 @@
                           
                 </div>
 
-            </section>
-            <section id="slider" class="section slider">                    
+    </section>
+    <section id="slider" class="section slider">                    
                             <div class="container slider__container">
                                 <ul class="slider__list">
                                     <li class="slider__item slider__item--active">
@@ -434,8 +435,8 @@
                                 </div>
                             </div>
                             
-            </section>
-            <section id="team" class="section team">
+    </section>
+    <section id="team" class="section team">
                 <div class="team__people">
                     <div class="container team__container">                    
                     <h1 class="team__title">команда</h1>
@@ -491,8 +492,8 @@
                 </div>
 
 
-            </section>
-            <section id="menu" class="section menu">
+    </section>
+    <section id="menu" class="section menu">
                 
                     <h1 class="menu__title">меню </h1>
                     <div class="menu__aside">
@@ -538,8 +539,8 @@
                
 
 
-            </section>
-            <section id="reviews" class="section reviews">
+    </section>
+    <section id="reviews" class="section reviews">
               
             <ul class="reviews__list">
                     <li class="reviews__item" style="background-image: url(./images/photos/photo1.png)">
@@ -670,8 +671,8 @@
 
                 </div>
             </div>
-            </section>               
-            <section class="section video">
+    </section>               
+    <section id="video" class="section video">
                 <div class="container video__container">
                   <h1>Как мы работаем</h1> 
                   <div class="c-player">
@@ -702,8 +703,8 @@
                         <span id="timer">00:00</span>
                         <input type="range" step="0.1" min="0" max="1" value="0" id="volume" />
                     </div> -->
-              </section>               
-            <section id="form" class="section form">
+    </section>               
+    <section id="form" class="section form">
                             <div class="container form__container">
                               <h1 class="form__title">Закажите доставку</h1>
                               <div class="form__inputs">
@@ -813,9 +814,11 @@
                         </div>
 
                    
-            </section>
-            <section id="contacts" class="section contacts">
-                    
+    </section>
+    <section class="section contacts">
+        <div id="map" class="map-container">
+        </div>
+        
                             <footer class="footer">
                                 <div class="container footer__container">
                                     <div class="contacts__text">
@@ -843,7 +846,7 @@
                                     </ul>
                                 </div>
                             </footer>
-            </section>
+    </section>
         
     </div>
     <ul class="fixed-menu">
