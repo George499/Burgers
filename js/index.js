@@ -1,3 +1,5 @@
+$(document).ready(function(){
+
 let menu__item = document.querySelectorAll("#menu__item");
 let menu = document.querySelector(".menu");
 
@@ -52,6 +54,8 @@ left.addEventListener("click", e => {
     }
 
 })
+
+// Скролл
 
 const sections = $(".section");
 const display = $(".maincontent");
@@ -144,6 +148,7 @@ $(document).on({
   });
 
 
+
 $("[data-scroll-to]").on("click", e => {
   e.preventDefault();
   performTransition(parseInt($(e.currentTarget).attr("data-scroll-to")));
@@ -209,6 +214,9 @@ let hamburger__fullscreen = document.querySelector("#fullscreen");
 header__menu__link.addEventListener ("click", function(){
     fullscreen.style.right = '0' }
 )
+$(".hamburger__link").on("click", e =>{
+  fullscreen.style.right = '-100%'
+})
 
 let exit = document.querySelector("#exit");
 
@@ -353,10 +361,89 @@ sendButton.addEventListener ("click", e => {
         }
 
   
-    ymaps.ready(init);    
+    ymaps.ready(init);
+    
         function init(){ 
             var myMap = new ymaps.Map("map", {
-                center: [55.76, 37.64],
-                zoom: 7
+                center: [59.93543728, 30.32056584],
+                zoom: 12,
+                controls: ['zoomControl'],
+                behaviors: ['drag']
             }); 
-        }
+            myGeoObjects = [];
+            myGeoObjects[0] = new ymaps.Placemark ([59.97801011, 30.31133680], {}, {
+              iconLayout: 'default#image',
+              iconImageHref: 'images/icons/map-marker.svg',
+              iconImageSize: [46, 57],
+              iconImageOffset: [-20, -20]
+            });
+            myGeoObjects[1] = new ymaps.Placemark ([59.94513339, 30.38312347], {}, {
+              iconLayout: 'default#image',
+              iconImageHref: 'images/icons/map-marker.svg',
+              iconImageSize: [46, 57],
+              iconImageOffset: [-20, -20]
+            });
+            myGeoObjects[2] = new ymaps.Placemark ([59.92042544, 30.49717524], {}, {
+              iconLayout: 'default#image',
+              iconImageHref: 'images/icons/map-marker.svg',
+              iconImageSize: [46, 57],
+              iconImageOffset: [-20, -40]
+            });
+            myGeoObjects[3] = new ymaps.Placemark ([59.88686609, 30.31857879], {}, {
+              iconLayout: 'default#image',
+              iconImageHref: 'images/icons/map-marker.svg',
+              iconImageSize: [46, 57],
+              iconImageOffset: [-20, -40]
+            });
+
+            var clusterer = new ymaps.Clusterer({clusterDisableClickZoom: true})
+            clusterer.add(myGeoObjects);
+            myMap.geoObjects.add(clusterer);
+        };
+
+      video = document.querySelector(".player")
+      progress = document.querySelector(".bar")
+
+      var isStarted = false; 
+      $('.play-pause').click(function() {
+          if(!isStarted){ 
+              isStarted = true; 
+              video.play();
+          } else {
+              isStarted = false;
+              video.pause();
+              
+          }
+      })      
+
+      $('#volume').on('change', function() {
+        $('.player').prop("volume", this.value);
+    });
+     
+      
+      $('.sound__img').click ( e => {
+        if(video.muted){
+          $('.player').prop('muted', false);
+      }
+      else{
+          $('.player').prop('muted',true);
+      }
+    })
+
+    video.ontimeupdate = progressUpdate;
+    progress.onclick = videoRewind;
+
+    function progressUpdate() {
+      let d = video.duration;
+      let c = video.currentTime;
+      progress.value = 100 * c/d;
+    }
+    function videoRewind() {
+      let w = this.offsetWidth;
+      let o = event.offsetX;
+      this.value = 100 * o/w;
+      video.pause();
+      video.currentTime = video.duration* (o/w);
+      video.play();
+    }
+})
