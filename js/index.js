@@ -1,3 +1,5 @@
+$(document).ready(function(){
+
 let menu__item = document.querySelectorAll("#menu__item");
 let menu = document.querySelector(".menu");
 
@@ -53,6 +55,126 @@ left.addEventListener("click", e => {
 
 })
 
+// Скролл
+
+const sections = $(".section");
+const display = $(".maincontent");
+let inscroll = false;
+
+const mobileDetect = new MobileDetect(window.navigator.userAgent);
+const isMobile = mobileDetect.mobile();
+
+const countPositionPercent = sectionEq => {
+  return `${sectionEq * -100}%`;
+};
+
+const switchActiveClass = (elems, elemNdx) => {
+  elems
+    .eq(elemNdx)
+    .addClass("active")
+    .siblings()
+    .removeClass("active");
+};
+
+const unBlockScroll = () => {
+  setTimeout(() => {
+    inscroll = false;
+  }, 1300); // подождать пока завершится инерция на тачпадах
+};
+
+const performTransition = sectionEq => {
+  if (inscroll) return;
+  inscroll = true;
+
+  const position = countPositionPercent(sectionEq);
+  const switchFixedMenuClass = () =>
+    switchActiveClass($(".fixed-menu__item"), sectionEq);
+
+  switchActiveClass(sections, sectionEq);
+  switchFixedMenuClass();
+
+  display.css({
+    transform: `translateY(${position})`
+  });
+
+ 
+
+  unBlockScroll();
+};
+
+const scrollViewport = direction => {
+  const activeSection = sections.filter(".active");
+  const nextSection = activeSection.next();
+  const prevSection = activeSection.prev();
+  $('fixed-menu').midnight()
+
+  if (direction === "next" && nextSection.length) {
+    performTransition(nextSection.index());
+  }
+
+  if (direction === "prev" && prevSection.length) {
+    performTransition(prevSection.index());
+  }
+};
+
+$(document).on({
+    wheel: e => {
+      const deltaY = e.originalEvent.deltaY;
+  
+      if (deltaY < 0) {
+          scrollViewport("prev")
+      }
+      if (deltaY > 0) {
+          scrollViewport("next")
+      }
+      
+    },
+    keydown: e => {
+      const tagName = e.target.tagName.toLowerCase();
+      const userTypingInInputs = tagName === "input" || tagName === "textarea";
+  
+      if (userTypingInInputs) return;
+  
+      switch (e.keyCode) {
+        case 40:
+          scrollViewport("next");
+          break;
+  
+        case 38:
+          scrollViewport("prev");
+          break;
+      }
+    }
+  });
+
+
+
+$("[data-scroll-to]").on("click", e => {
+  e.preventDefault();
+  performTransition(parseInt($(e.currentTarget).attr("data-scroll-to")));
+});
+
+// разрешаем свайп на мобильниках
+if (isMobile) {
+  window.addEventListener(
+    "touchmove",
+    e => {
+      e.preventDefault();
+    },
+    { passive: false }
+  );
+
+  $("body").swipe({
+    swipe: (event, direction) => {
+      let scrollDirecrion;
+      if (direction === "up") scrollDirecrion = "next";
+      if (direction === "down") scrollDirecrion = "prev";
+      scrollViewport(scrollDirecrion);
+    }
+  });
+}
+
+
 
 
 
@@ -92,6 +214,9 @@ let hamburger__fullscreen = document.querySelector("#fullscreen");
 header__menu__link.addEventListener ("click", function(){
     fullscreen.style.right = '0' }
 )
+$(".hamburger__link").on("click", e =>{
+  fullscreen.style.right = '-100%'
+})
 
 let exit = document.querySelector("#exit");
 
@@ -234,13 +359,91 @@ sendButton.addEventListener ("click", e => {
             field.nextElementSibling.textContent = field.validationMessage;
             return field.checkValidity(); 
         }
+
+  
+    ymaps.ready(init);
     
-    
+        function init(){ 
+            var myMap = new ymaps.Map("map", {
+                center: [59.93543728, 30.32056584],
+                zoom: 12,
+                controls: ['zoomControl'],
+                behaviors: ['drag']
+            }); 
+            myGeoObjects = [];
+            myGeoObjects[0] = new ymaps.Placemark ([59.97801011, 30.31133680], {}, {
+              iconLayout: 'default#image',
+              iconImageHref: 'images/icons/map-marker.svg',
+              iconImageSize: [46, 57],
+              iconImageOffset: [-20, -20]
+            });
+            myGeoObjects[1] = new ymaps.Placemark ([59.94513339, 30.38312347], {}, {
+              iconLayout: 'default#image',
+              iconImageHref: 'images/icons/map-marker.svg',
+              iconImageSize: [46, 57],
+              iconImageOffset: [-20, -20]
+            });
+            myGeoObjects[2] = new ymaps.Placemark ([59.92042544, 30.49717524], {}, {
+              iconLayout: 'default#image',
+              iconImageHref: 'images/icons/map-marker.svg',
+              iconImageSize: [46, 57],
+              iconImageOffset: [-20, -40]
+            });
+            myGeoObjects[3] = new ymaps.Placemark ([59.88686609, 30.31857879], {}, {
+              iconLayout: 'default#image',
+              iconImageHref: 'images/icons/map-marker.svg',
+              iconImageSize: [46, 57],
+              iconImageOffset: [-20, -40]
+            });
 
+            var clusterer = new ymaps.Clusterer({clusterDisableClickZoom: true})
+            clusterer.add(myGeoObjects);
+            myMap.geoObjects.add(clusterer);
+        };
 
+      video = document.querySelector(".player")
+      progress = document.querySelector(".bar")
 
+      var isStarted = false; 
+      $('.play-pause').click(function() {
+          if(!isStarted){ 
+              isStarted = true; 
+              video.play();
+          } else {
+              isStarted = false;
+              video.pause();
+              
+          }
+      })      
 
+      $('#volume').on('change', function() {
+        $('.player').prop("volume", this.value);
+    });
+     
+      
+      $('.sound__img').click ( e => {
+        if(video.muted){
+          $('.player').prop('muted', false);
+      }
+      else{
+          $('.player').prop('muted',true);
+      }
+    })
 
+    video.ontimeupdate = progressUpdate;
+    progress.onclick = videoRewind;
 
-        
-    
+    function progressUpdate() {
+      let d = video.duration;
+      let c = video.currentTime;
+      progress.value = 100 * c/d;
+    }
+    function videoRewind() {
+      let w = this.offsetWidth;
+      let o = event.offsetX;
+      this.value = 100 * o/w;
+      video.pause();
+      video.currentTime = video.duration* (o/w);
+      video.play();
+    }
+})

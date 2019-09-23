@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8">    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="CSS/main.css" class="rel"> 
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=a071233a-e16e-42b6-9971-43c85214e736&lang=ru_RU" type="text/javascript">
+    </script>
     <title>Burgers</title>
 </head>
 <body>
     <div class="wrapper">
+        <div class="maincontent">        
         
-        
-    <section class="section mrburger">   
+    <section class="section mrburger active">   
          <header class="header">    
                 <div class="container header__container">    
                 <div class="logo">           
@@ -23,32 +25,32 @@
                     <nav class="navigation">
                     <ul class="navigation__list">
                         <li class="navigation__item">
-                            <a href="./index.html" class="navigation__link">о нас</a>
+                            <a href="" data-scroll-to="1" class="navigation__link">о нас</a>
                         </li>
                         <li class="navigation__item">
-                            <a href="./index.html" class="navigation__link">бургеры</a>
+                            <a href="" data-scroll-to="2" class="navigation__link">бургеры</a>
                         </li>
                         <li class="navigation__item">
-                            <a href="./index.html" class="navigation__link">команда</a>
+                            <a href="" data-scroll-to="3" class="navigation__link">команда</a>
                         </li>
                         <li class="navigation__item">
-                            <a href="./index.html" class="navigation__link">меню</a>
+                            <a href="" data-scroll-to="4" class="navigation__link">меню</a>
                         </li>
                         <li class="navigation__item">
-                            <a href="./index.html" class="navigation__link">отзывы</a>
+                            <a href="" data-scroll-to="5" class="navigation__link">отзывы</a>
                         </li>
                         <li class="navigation__item">
-                            <a href="./index.html" class="navigation__link">как мы работаем</a>
+                            <a href="" data-scroll-to="6" class="navigation__link">как мы работаем</a>
                         </li>
                         <li class="navigation__item">
-                            <a href="./index.html" class="navigation__link">контакты</a>
+                            <a href="" data-scroll-to="8" class="navigation__link">контакты</a>
                         </li>
                     </ul>
                 </nav>
                 
 
                 <div class="header-link">
-                    <button type="button" class="btn">
+                    <button a href="" data-scroll-to="7" type="button" class="btn">
                     заказать
                 </button>
                 <a class="header-menu-link" id="menulink" href="#">
@@ -80,10 +82,10 @@
             
     </div>
         
-        <svg class="scrolldown" viewBox="0 0 30 20" height="30" width="20"><use xlink="" href="images/SVG/sprite.svg#arrow"></use></svg>
+        <svg a href="" data-scroll-to="1" class="scrolldown" viewBox="0 0 30 20" height="30" width="20"><use xlink="" href="images/SVG/sprite.svg#arrow"></use></svg>
     </section>
 
-            <section id="we" class="section we">
+    <section id="we" class="section we" data-midnight="blue">
                 <div class="container we__container">
                   
                       <h1 class="we__title">
@@ -127,8 +129,8 @@
                           
                 </div>
 
-            </section>
-            <section id="slider" class="section slider">                    
+    </section>
+    <section class="section slider">                    
                             <div class="container slider__container">
                                 <ul class="slider__list">
                                     <li class="slider__item slider__item--active">
@@ -433,8 +435,8 @@
                                 </div>
                             </div>
                             
-            </section>
-            <section id="team" class="section team">
+    </section>
+    <section class="section team">
                 <div class="team__people">
                     <div class="container team__container">                    
                     <h1 class="team__title">команда</h1>
@@ -490,8 +492,8 @@
                 </div>
 
 
-            </section>
-            <section id="menu" class="section menu">
+    </section>
+    <section class="section menu">
                 
                     <h1 class="menu__title">меню </h1>
                     <div class="menu__aside">
@@ -537,8 +539,8 @@
                
 
 
-            </section>
-            <section id="reviews" class="section reviews">
+    </section>
+    <section class="section reviews">
               
             <ul class="reviews__list">
                     <li class="reviews__item" style="background-image: url(./images/photos/photo1.png)">
@@ -669,8 +671,40 @@
 
                 </div>
             </div>
-            </section>                              
-            <section id="form" class="section form">
+    </section>               
+    <section class="section video">
+                <div class="container video__container">
+                  <h1>Как мы работаем</h1> 
+                  <div class="c-player">
+                  <video class="player" poster="images/player-img.png"  src="images/vid/THE BEST BURGER IN LONDON DOUBLE CHEESE BURGER GRILLED CHEESE GRILLED BEEF -u0026 BACON CHIPS STREET FOOD (360p) (via Skyload).mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></video>
+                  <div class="controls">
+                      <div class="duration">
+                        <div class="buttons">
+                                <button class="play-pause"></button>
+                            </div>
+                      <input max="100" value="0" type="range" class="bar">
+                          
+                        </input>
+                    </div>
+                      <div class="sound">
+                        <img src="images/tollbar_volume.png" alt="Icon" class="sound__img">
+                        <input type="range" step="0.1" min="0" max="1" value="1" class="bar sound" id="volume">
+                        
+                    </div>
+                    </div>
+                  </div>
+                  <!-- <video width="400" height="300">
+                        <source src="cats.mp4" type="video/mp4">
+                        <source src="cats.webm" type="video/webm">
+                        <source src="cats.ogv" type="video/ogg">
+                    </video>
+                    <div id="controls" class="hidden">
+                        <a id="playBtn">Play</a>
+                        <span id="timer">00:00</span>
+                        <input type="range" step="0.1" min="0" max="1" value="0" id="volume" />
+                    </div> -->
+    </section>               
+    <section class="section form">
                             <div class="container form__container">
                               <h1 class="form__title">Закажите доставку</h1>
                               <div class="form__inputs">
@@ -780,9 +814,11 @@
                         </div>
 
                    
-            </section>
-            <section id="contacts" class="section contacts">
-                    
+    </section>
+    <section class="section contacts">
+        <div id="map" class="map-container">
+        </div>
+        
                             <footer class="footer">
                                 <div class="container footer__container">
                                     <div class="contacts__text">
@@ -810,43 +846,41 @@
                                     </ul>
                                 </div>
                             </footer>
-            </section>
-                                
-                         
-        <ul class="fixed-menu">
-                <li class="fixed-menu__item fixed-menu__item--current">
-                <button type="button" class="fixed-menu__dot"></button>
-                </li>
-                <li class="fixed-menu__item">
-                <button type="button" class="fixed-menu__dot"></button>
-                </li>
-                <li class="fixed-menu__item">
-                <button type="button" class="fixed-menu__dot"></button>
-                </li>
-                <li class="fixed-menu__item">
-                <button type="button" class="fixed-menu__dot"></button>
-                </li>
-                <li class="fixed-menu__item">
-                <button type="button" class="fixed-menu__dot"></button>
-                </li>
-                <li class="fixed-menu__item">
-                <button type="button" class="fixed-menu__dot"></button>
-                </li>
-                <li class="fixed-menu__item">
-                <button type="button" class="fixed-menu__dot"></button>
-                </li>
-                <li class="fixed-menu__item">
-                <button type="button" class="fixed-menu__dot"></button>
-                </li>
-                <li class="fixed-menu__item">
-                <button type="button" class="fixed-menu__dot"></button>
-                </li>
-                
-                
-            </ul>    
-              
-
+    </section>
+        
     </div>
+    <ul class="fixed-menu">
+            <li class="fixed-menu__item active">
+            <button a href="" data-scroll-to="0" type="button" class="fixed-menu__dot"></button>
+            </li>
+            <li class="fixed-menu__item">
+            <button a href="" data-scroll-to="1" type="button" class="fixed-menu__dot"></button>
+            </li>
+            <li class="fixed-menu__item">
+            <button a href="" data-scroll-to="2" type="button" class="fixed-menu__dot"></button>
+            </li>
+            <li class="fixed-menu__item">
+            <button a href="" data-scroll-to="3" type="button" class="fixed-menu__dot"></button>
+            </li>
+            <li class="fixed-menu__item">
+            <button a href="" data-scroll-to="4" type="button" class="fixed-menu__dot"></button>
+            </li>
+            <li class="fixed-menu__item">
+            <button a href="" data-scroll-to="5" type="button" class="fixed-menu__dot"></button>
+            </li>
+            <li class="fixed-menu__item">
+            <button a href="" data-scroll-to="6" type="button" class="fixed-menu__dot"></button>
+            </li>
+            <li class="fixed-menu__item">
+            <button a href="" data-scroll-to="7" type="button" class="fixed-menu__dot"></button>
+            </li>
+            <li class="fixed-menu__item">
+            <button a href="" data-scroll-to="8" type="button" class="fixed-menu__dot"></button>
+            </li>
+            
+            
+        </ul>
+</div>
     <section class="section hamburger-fullscreen" id="fullscreen">
 
         <div class="container container--hamburger">
@@ -858,25 +892,25 @@
             </div>            
                 <ul class="hamburger__list">
                     <li class="hamburger__item">
-                        <a href="#we" class="hamburger__link">о нас</a>
+                        <a href="" data-scroll-to="1" class="hamburger__link">о нас</a>
                     </li>
                     <li class="hamburger__item">
-                        <a href="#slider" class="hamburger__link">бургеры</a>
+                        <a href="" data-scroll-to="2" class="hamburger__link">бургеры</a>
                     </li>
                     <li class="hamburger__item">
-                        <a href="#team" class="hamburger__link">команда</a>
+                        <a href="" data-scroll-to="3" class="hamburger__link">команда</a>
                     </li>
                     <li class="hamburger__item">
-                        <a href="#menu" class="hamburger__link">меню</a>
+                        <a href="" data-scroll-to="4" class="hamburger__link">меню</a>
                     </li>
                     <li class="hamburger__item">
-                        <a href="#reviews" class="hamburger__link">отзывы</a>
+                        <a href="" data-scroll-to="5" class="hamburger__link">отзывы</a>
                     </li>
                     <li class="hamburger__item">
-                        <a href="#" class="hamburger__link">как мы работаем</a>
+                        <a href="" data-scroll-to="6" class="hamburger__link">как мы работаем</a>
                     </li>
                     <li class="hamburger__item">
-                        <a href="#contacts" class="hamburger__link">контакты</a>
+                        <a href="" data-scroll-to="8" class="hamburger__link">контакты</a>
                     </li>
                 </ul>
             
@@ -884,6 +918,10 @@
 
     </section>  
     <script src="js/jquery-3.4.1.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/midnight.js/1.1.2/midnight.jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.3/mobile-detect.min.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.js"></script>
     <script src="js/index.js"></script>
     
 </body>

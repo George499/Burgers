@@ -244,7 +244,7 @@ right: rem(53px);
 }
 }
 .fixed-menu__item {
-    &--current {
+    &.active {
         .fixed-menu__dot {
             border: solid #fff rem(1px); 
         }

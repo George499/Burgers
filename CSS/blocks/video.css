@@ -1,0 +1,6 @@
+.video {
+  background: url(../../images/video-background.png) center center/cover no-repeat;
+  position: relative;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
