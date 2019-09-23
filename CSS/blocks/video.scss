@@ -1,5 +1,5 @@
 .video {
-    background: url(../../images/video-background.png) center center / cover no-repeat;
+    background: url(../images/video-background.png) center center / cover no-repeat;
     position: relative;
     justify-content: center;
     h1 {
@@ -60,7 +60,7 @@
     cursor: pointer;
 }
 .buttons button:before {
-    content: url(/images/toolbar_play.png);
+    content: url(../images/toolbar_play.png);
     width: 30px;
     height: 30px;
     display: inline-block;
