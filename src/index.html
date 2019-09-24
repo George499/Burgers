@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="CSS/main.css" class="rel"> 
+    <link rel="stylesheet" href="styles/main.css" class="rel"> 
     <script src="https://api-maps.yandex.ru/2.1/?apikey=a071233a-e16e-42b6-9971-43c85214e736&lang=ru_RU" type="text/javascript">
     </script>
     <title>Burgers</title>
@@ -85,7 +85,7 @@
         <svg a href="" data-scroll-to="1" class="scrolldown" viewBox="0 0 30 20" height="30" width="20"><use xlink="" href="images/SVG/sprite.svg#arrow"></use></svg>
     </section>
 
-    <section id="we" class="section we" data-midnight="blue">
+    <section id="we" class="section we">
                 <div class="container we__container">
                   
                       <h1 class="we__title">
@@ -171,9 +171,8 @@
                                                         </li>
                 
                 
-                                                    </ul>                
-                                                    
-                                
+                                                    </ul>
+    
                                                 </div>
                 
                                             </div>
@@ -189,7 +188,7 @@
                                             <h1 class="slider__title">dark beef burger</h1>
                                             <p class="slider__item__desc"> Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</p>
                                             <h1 class="slider__price"> <span class="slider__price slider__price--big">500</span> <span class="slider__price slider__price--small">рублей</span>
-                                                <button class="btn btn--slider">заказать</button></h1>
+                                                <button a href="" data-scroll-to="7" class="btn btn--slider">заказать</button></h1>
                                         </div>
                                     </li>  
                                     <li class="slider__item">
@@ -676,18 +675,18 @@
                 <div class="container video__container">
                   <h1>Как мы работаем</h1> 
                   <div class="c-player">
-                  <video class="player" poster="/images/player-img.png"  src="/images/vid/THE BEST BURGER IN LONDON DOUBLE CHEESE BURGER GRILLED CHEESE GRILLED BEEF -u0026 BACON CHIPS STREET FOOD (360p) (via Skyload).mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></video>
+                  <video class="player" poster="images/player-img.png"  src="images/vid/THE BEST BURGER IN LONDON DOUBLE CHEESE BURGER GRILLED CHEESE GRILLED BEEF -u0026 BACON CHIPS STREET FOOD (360p) (via Skyload).mp4" allowfullscreen></video>
                   <div class="controls">
                       <div class="duration">
                         <div class="buttons">
-                                <button class="play-pause"></button>
+                                <button id="play-pause"></button>
                             </div>
                       <input max="100" value="0" type="range" class="bar">
                           
                         </input>
                     </div>
                       <div class="sound">
-                        <img src="/images/tollbar_volume.png" alt="Icon" class="sound__img">
+                        <img src="images/tollbar_volume.png" alt="Icon" class="sound__img">
                         <input type="range" step="0.1" min="0" max="1" value="1" class="bar sound" id="volume">
                         
                     </div>
@@ -917,12 +916,11 @@
         </div>
 
     </section>  
-    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>   
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/midnight.js/1.1.2/midnight.jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.3/mobile-detect.min.js"></script>    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.js"></script>
-    <script src="js/index.js"></script>
+    <script src="index.js"></script>
     
 </body>
 </html>

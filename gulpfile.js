@@ -15,6 +15,7 @@ const uglify = require('gulp-uglify');
 const svgo = require('gulp-svgo')
 const svgSprite = require('gulp-svg-sprite')
 const gulpif = require('gulp-if');
+const svgmin = require('gulp-svgmin');
 
 const env = process.env.NODE_ENV;
 
@@ -26,36 +27,48 @@ task('clean', () => {
     return src('dist/**/*', { read: false }).pipe(rm())
 });
 task("copy:html", () => {
-    return src("*.html")
+    return src("src/*.html")
         .pipe(dest("dist"))
         .pipe(reload({ stream: true }))
 })
-task("icons", () => {
-    return src('images/svg/*.svg')
-    .pipe(svgo({
-        plugins: [
-            {
-                removeAttrs: {
-                    attrs: "(fill|stroke|style|width|height|data.*)"
-                }
-            }
-        ]
-    })
-    )
-    .pipe(svgSprite({
-        mode: {
-            symbol: {
-                sprite: "../sprite.svg"
-            }
-        }
-    }))
-    .pipe(dest("dist/images/icons"));
+task("copy:img", () => {
+    return src("src/images/**/*")
+        .pipe(dest("dist/images"))
+        .pipe(reload({ stream: true }))
 })
+task("copy:fonts", () => {
+    return src("src/fonts/**/*")
+        .pipe(dest("dist/fonts"))
+        .pipe(reload({ stream: true }))
+})
+task("icons", () => {
+    return src('src/images/icons/*.svg')
+    .pipe(svgmin({
+      plugins: [{
+          removeDoctype: false
+      }, {
+          removeComments: false
+      }, {
+          cleanupNumericValues: {
+              floatPrecision: 2
+          }
+      }, {
+          convertColors: {
+              names2hex: false,
+              rgb2hex: false
+          }
+      }]
+}))
+  .pipe(dest("dist/images/icons"));
+});
+    
+
+
 
 
 const styles = [
     "node_modules/normalize.css/normalize.css",
-    "CSS/main.scss"
+    "src/styles/main.scss"
 ];
 
 task("styles", () => {
@@ -72,10 +85,10 @@ task("styles", () => {
         .pipe(gulpif(env === 'prod', gcmq()))
         .pipe(gulpif(env === 'prod', cleanCSS({ compatibility: 'ie8' })))
         .pipe(gulpif(env === 'dev', sourcemaps.write()))
-        .pipe(dest('dist'));
+        .pipe(dest('dist/styles'));
 })
 task('scripts', () => {
-    return src('js/index.js')
+    return src('src/index.js')
         .pipe(sourcemaps.init())
         .pipe(concat('index.js', { newLine: ';' }))
         .pipe(babel({
@@ -97,9 +110,9 @@ task('server', () => {
     });
 });
 
-watch("css/**/*.scss", series("styles"));
+watch("src/styles/**/*.scss", series("styles"));
 watch("*.html", series("copy:html"))
-watch("index.js", series("scripts"))
+watch("src/index.js", series("scripts"))
 watch("images/svg/*.svg", series("icons"))
 
-task("default", series("clean", "copy:html", "styles", "scripts", "icons", "server"))
+task("default", series("clean", "copy:html", "copy:img", "copy:fonts", "styles", "scripts", "icons", "server"))

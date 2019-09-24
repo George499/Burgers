@@ -35,13 +35,17 @@ const computed = getComputedStyle(sliderList);
 
 right.addEventListener('click', e => {
     e.preventDefault();
-    let currentLeft = parseInt(computed.left)
-         if (currentLeft > -1880) {
-        sliderList.style.left = currentLeft - 940 + "px";
-         }
-         else {
-        sliderList.style.left = currentLeft + 940*4 + "px";
-         }
+    function(e) =>{
+
+    $(".slider__list").attr("left") - 100 + "%"
+    }
+    // let currentLeft = parseInt(computed.left)
+    //      if (currentLeft > -1880) {
+    //     sliderList.style.left = currentLeft - "100%"
+    //      }
+    //      else {
+    //     sliderList.style.left = currentLeft + 940*4 + "px";
+    //      }
 });
 left.addEventListener("click", e => {
     e.preventDefault();
@@ -106,7 +110,7 @@ const scrollViewport = direction => {
   const activeSection = sections.filter(".active");
   const nextSection = activeSection.next();
   const prevSection = activeSection.prev();
-  $('fixed-menu').midnight()
+
 
   if (direction === "next" && nextSection.length) {
     performTransition(nextSection.index());
@@ -405,12 +409,15 @@ sendButton.addEventListener ("click", e => {
       progress = document.querySelector(".bar")
 
       var isStarted = false; 
-      $('.play-pause').click(function() {
+      $('#play-pause').add('.player').click(function() {
           if(!isStarted){ 
-              isStarted = true; 
+              isStarted = true;
+              $('#play-pause').addClass ('pause')
               video.play();
           } else {
               isStarted = false;
+              $('#play-pause').removeClass ('pause')
+              
               video.pause();
               
           }
@@ -423,12 +430,13 @@ sendButton.addEventListener ("click", e => {
       
       $('.sound__img').click ( e => {
         if(video.muted){
-          $('.player').prop('muted', false);
+          $('.player').prop('muted', false);          
       }
       else{
-          $('.player').prop('muted',true);
+          $('.player').prop('muted',true);          
       }
     })
+    
 
     video.ontimeupdate = progressUpdate;
     progress.onclick = videoRewind;

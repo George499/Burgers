@@ -40,10 +40,7 @@
 .header__container {
     display: flex;
     flex-direction: row;
-    @include tablets {
     
-   
-    }
 }
 .mrburger__content {
     display: flex;

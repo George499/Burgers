@@ -1984,7 +1984,7 @@ ul h1:hover {
   width: 0.9375rem; }
 
 .video {
-  background: url(../../images/video-background.png) center center/cover no-repeat;
+  background: url(../images/video-background.png) center center/cover no-repeat;
   position: relative;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -2006,7 +2006,8 @@ ul h1:hover {
   height: 100%; }
 
 .player {
-  width: 100%; }
+  width: 100%;
+  cursor: pointer; }
 
 .c-player {
   width: 100%;
@@ -2059,7 +2060,7 @@ ul h1:hover {
   cursor: pointer; }
 
 .buttons button:before {
-  content: url(/images/toolbar_play.png);
+  content: url(../images/toolbar_play.png);
   width: 30px;
   height: 30px;
   display: inline-block;
@@ -2071,7 +2072,11 @@ ul h1:hover {
   content: ""; }
 
 .buttons button.pause:before {
-  content: "\f28b"; }
+  content: url(../images/icons/pause-button.svg);
+  width: 20px;
+  display: inline-block;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased; }
 
 .duration {
   -webkit-box-flex: 1;
@@ -2108,7 +2113,8 @@ ul h1:hover {
   margin-right: 5px; }
 
 .sound__img {
-  padding-right: 5px; }
+  padding-right: 5px;
+  cursor: pointer; }
 
 .sound__volume {
   -webkit-box-flex: 1;

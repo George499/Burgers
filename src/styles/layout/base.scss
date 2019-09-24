@@ -1,10 +1,12 @@
-
+@function rem($px) {
+    @return $px / 16px + 0rem;
+}
 html, body {
     font-family: "ubunturegular";
     height: 100%;
-    font-size: 16px;
+    font-size: 0.9rem;
     @include tablets {
-        font-size: 15px;
+        font-size: 0.8rem;
     }
 
     @include phones {
