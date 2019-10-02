@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "gulp": "^4.0.2",
+    "gulp-svgmin": "^2.2.0",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {

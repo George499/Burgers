@@ -15,24 +15,53 @@
     height: 100%;
     justify-content: center;
     overflow: hidden;
-}
-.slider__list {
-    justify-content: center;
-    display: flex;
-    height: 100%;
-    align-items: center;    
     width: 100%;
     position: relative;
-    left: 200%;
+    overflow: hidden;
+    // -webkit-user-select: none;
+    // -moz-user-select: none;
+    // -ms-user-select: none;
+    // -o-user-select: none;
+    // user-select: none;
+    // text-align: center;
+}
+.slider__list {
+    // white-space: nowrap;
+    // font-size: 0;
+    // position: absolute;
+    // top: 0;
+    // left: 0
+
+    justify-content: flex-start;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    left: 0;
     right: 0;
+    position: relative;
+    // width: calc(100% * 4);
+    // -webkit-transition: 1s;
+    // -o-transition: 1s;
+    // transition: 1s;
+    // -webkit-transition-timing-function: cubic-bezier(.67,.01,.23,1);
+    // -o-transition-timing-function: cubic-bezier(.67,.01,.23,1);
+    // transition-timing-function: cubic-bezier(.67,.01,.23,1);
 }
 .slider__item {
     display: flex;
+    // width:  940px;
+    // height: 100%;
     align-items: center;
     height: 100%;
     padding: rem(90px) 0rem;
     min-width: 100%;
     overflow: hidden;   
+    // width: calc(100%/4);
+    // list-style: none;
+    // display: inline;
+    // float: left;
     
     
     @include tablets {

@@ -23,42 +23,49 @@ for (let i = 0; i < menu__item.length; i++) {
             menu__item[i].classList.add('menu__item--active')
         }
     })
+};
+
+
+$(function () {
+var moveSlide = function (container, slideNum) {
+    var items = container.find(".slider__item"),
+        activeSlide = items.filter(".active"),
+        reqItem = items.eq(slideNum),
+        reqIndex = reqItem.index(),
+        list = container.find(".slider__list"),
+        duration = 500;     
+
+    if (reqItem.length){    
+      list.animate({"left": -reqIndex * 100 + "%"}, duration, function () {
+    activeSlide.removeClass ("active");
+    reqItem.addClass("active");
+
+  });
 }
+  }
 
 
-const left = document.querySelector(".scrollarrow--left");
-const right = document.querySelector(".scrollarrow--right");
-const sliderList = document.querySelector(".slider__list");
-const slides = document.querySelectorAll(".slider__item");
-const computed = getComputedStyle(sliderList);
+$(".scrollarrow").on("click", function(e) {
+  e.preventDefault();
+  var $this = $(this),
+  container = $this.closest(".slider__container"),
+  items = $(".slider__item", container),
+  activeItem = items.filter(".active"),  
+  existedItem, edgeItem, reqItem;
 
-
-right.addEventListener('click', e => {
-    e.preventDefault();
-    function(e) =>{
-
-    $(".slider__list").attr("left") - 100 + "%"
-    }
-    // let currentLeft = parseInt(computed.left)
-    //      if (currentLeft > -1880) {
-    //     sliderList.style.left = currentLeft - "100%"
-    //      }
-    //      else {
-    //     sliderList.style.left = currentLeft + 940*4 + "px";
-    //      }
-});
-left.addEventListener("click", e => {
-    e.preventDefault();
-    let currentLeft = parseInt(computed.left)   
-    if (currentLeft < 1880)  {    
-    sliderList.style.left = currentLeft + 940 + "px";        
-}
-    else {
-        sliderList.style.left = currentLeft - 940*4 + "px";
-    }
-
+  if ($this.hasClass("scrollarrow--right")){ //next
+existedItem = activeItem.next();
+edgeItem = items.first();
+  }
+  if ($this.hasClass("scrollarrow--left")){
+    existedItem = activeItem.prev();
+    edgeItem = items.last();
+  }
+  reqItem = existedItem.length ? existedItem.index() : edgeItem.index();
+ moveSlide(container, reqItem);
+  
 })
-
+})
 // Скролл
 
 const sections = $(".section");
@@ -454,4 +461,4 @@ sendButton.addEventListener ("click", e => {
       video.currentTime = video.duration* (o/w);
       video.play();
     }
-})
+  })

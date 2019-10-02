@@ -63,9 +63,6 @@ task("icons", () => {
 });
     
 
-
-
-
 const styles = [
     "node_modules/normalize.css/normalize.css",
     "src/styles/main.scss"
@@ -77,7 +74,9 @@ task("styles", () => {
         .pipe(concat('main.scss'))
         .pipe(sassGlob())
         .pipe(sass().on('error', sass.logError))
-        .pipe(px2rem())
+        .pipe(px2rem({  
+            one: true         
+          }))
         // .pipe(autoprefixer({
         //     browsers: ['last 2 versions'],
         //     cascade: false
