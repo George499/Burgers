@@ -55,7 +55,7 @@
     // height: 100%;
     align-items: center;
     height: 100%;
-    padding: rem(90px) 0rem;
+    padding: 90px 0px;
     min-width: 100%;
     overflow: hidden;   
     // width: calc(100%/4);
@@ -75,7 +75,7 @@
     align-items: center;
     width: 50%;
     height: 100%;
-    margin-right: rem(9px);
+    margin-right: 9px;
     justify-content: center;
     @include tablets {
         margin: 0;
@@ -89,36 +89,36 @@
     position: absolute;
     left: 0rem;
     top: 0rem;
-    height: rem(90px);
-    width: rem(90px);
-    border-radius: rem(5px);
+    height: 90px;
+    width: 90px;
+    border-radius: 5px;
     background-color: #f08c33;
     transition: 0.3s;
     cursor: pointer;
 }
 .slider__icon__sprite {
-    height: rem(44px);
-    width: rem(46px);
+    height: 44px;
+    width: 46px;
     position: absolute;
-    left: rem(22px);
-    bottom: rem(32px);
+    left: 22px;
+    bottom: 32px;
     color: #fff;
 }
 .slider__icon__text {
     position: absolute;
     @include title(#fff, rem(14px), inherit, 0);
-    bottom: rem(10px);
-    left: rem(23px);
+    bottom: 10px;
+    left: 23px;
 }
 .popup {
     position: absolute;
     background: rgba(232, 233, 235, 0.9);
-    border-radius: rem(5px);
-    left: rem(90px);
+    border-radius: 5px;
+    left: 90px;
     top: 0;    
     transition: 0.3s;
-    padding: rem(20px);    
-    width: rem(270px);
+    padding: 20px;    
+    width: 270px;
     display: none;
     
 }
@@ -135,7 +135,7 @@
 .popup__list {
     width: 100%;
 
-    @include text (rem(14px), 500, $green, 24px);
+    @include text (14px, 500, $green, 24px);
     font-family: ubuntumedium;
     
 }
@@ -143,27 +143,27 @@
     display: flex;
     align-items: center;
     position: relative;
-    min-width: rem(155px);
-    margin-bottom: rem(18px);
+    min-width: 155px;
+    margin-bottom: 18px;
     &:last-child {
         margin-bottom: 0;
     }
 }
 .popup__title {
-    padding: rem(10px);
+    padding: 10px;
 }
 .popup__weight {
     position: absolute;
     right: 0;
-    @include text (rem(14px), 300, $green, 24px);
+    @include text (14px, 300, $green, 24px);
     font-family: 'ubuntu-light';
 }
 .popup__sprite {
-    height: rem(39px);
-    width: rem(44px);
+    height: 39px;
+    width: 44px;
 }
 .popup__img {
-    margin-right: rem(24px);
+    margin-right: 24px;
 }
 .slider__burger-photo {
     min-width: 70%;
@@ -178,8 +178,8 @@
     }
     }
 .slider__burger__img {
-    height: rem(329px);
-    width: rem(505px);
+    height: 329px;
+    width: 505px;
     height: 100%;
     width: 100%;
       
@@ -198,13 +198,13 @@
     }
 }
 .calories__icon__sprite {
-    height: rem(60px);
-    width: rem(60px);
+    height: 60px;
+    width: 60px;
 }
 .calories__icon-text {
     position: absolute;
     font-family: 'gagalinregular';
-    font-size: rem(20px);
+    font-size: 20px;
     color: #fff;
     &--digits {
         top: 40%;
@@ -212,8 +212,8 @@
     }
     &--word {
         top: 100%;
-        left: rem(15px);
-        font-size: rem(14px);
+        left: 15px;
+        font-size: 14px;
     }
 }
 .slider__item__right {
@@ -244,11 +244,11 @@
             justify-content: center;
         }   
         &--big{
-            margin-right: rem(5px);
+            margin-right: 5px;
         }   
         &--small {
             font-size: 30px;
-            margin-right: rem(29px);
+            margin-right: 29px;
         }
     }
     .btn--slider {
@@ -261,7 +261,7 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    max-width: rem(1100px);
+    max-width: 1100px;
 }
 .slider__scroll {
     border: 0;
@@ -269,10 +269,10 @@
     padding: 0;
 }
 .scrollarrow {
-    width: rem(29px);
+    width: 29px;
     cursor: pointer;
     display: block;
-    height: rem(27px);
+    height: 27px;
     
     &--left{
     transform: rotate(90deg);

@@ -1,7 +1,7 @@
 
 .section {
 height: 100vh;
-min-height: rem(650px);
+min-height: 650px;
 }
 .we {
 background: url(../images/webckgrnd.png) center center / cover no-repeat;
@@ -14,12 +14,12 @@ margin: 0 auto;
 max-height: auto;
 }
 .we__title {
-    @include title ($green, rem(72px), rem(64px), 0);
+    @include title ($green, 72px, 64px, 0);
     @include phones {
-        font-size: rem(50px);
+        font-size: 50px;
     }
-    padding-top: rem(127px);
-    margin-bottom: rem(55px);
+    padding-top: 127px;
+    margin-bottom: 55px;
     align-self: center;
 }
 
@@ -39,28 +39,28 @@ max-height: auto;
 width: 30%;
 @include phones {
     display: flex;
-    margin-bottom: rem(10px);
+    margin-bottom: 10px;
     width: 100%;
 }
 
 }
 .feat__icon {
     align-self: center;  
-    margin-bottom: rem(24px);
+    margin-bottom: 24px;
     
 }
 .features__list h2 {
-    @include subtitle (rem(24px), 500, rem(28px), $green, 0)
+    @include subtitle (24px, 500, 28px, $green, 0)
     @include phones {
         text-align: left;
     }
-     margin-bottom: rem(25px);     
+     margin-bottom: 25px;     
     text-align: center;
     letter-spacing: -0.02em;   
 }
 
 .features__list p {
-    @include text (rem(14px), 300, $green, rem(24px));
+    @include text (14px, 300, $green, 24px);
     @include phones {
         text-align: left;
     }
@@ -68,11 +68,11 @@ width: 30%;
     margin: 0;
 }
 .feat__image {
-    height: rem(89px);
-    width: rem(97px);
+    height: 89px;
+    width: 97px;
 }
 .feat__desc {
     @include phones {
-        margin-left: rem(10px);
+        margin-left: 10px;
     }
 }

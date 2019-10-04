@@ -4,7 +4,7 @@
     position: relative;
     justify-content: center;
     @include tablets {
-    padding-bottom: rem(100px);
+    padding-bottom: 100px;
       }
     } 
 .header {
@@ -12,7 +12,7 @@
 }
 .mr__burger__title {
     @include tablets {
-        font-size: rem(65px);
+        font-size: 65px;
     }
     @include phones {
         font-size: 50px;
@@ -48,7 +48,7 @@
     flex: 0.8;
     align-items: center;
     
-    margin-bottom: rem(95px);
+    margin-bottom: 95px;
     @include tablets {
     flex-direction: column;
     padding: 0 23%;
@@ -59,18 +59,18 @@
 }
 
 .logo {
-    margin-right: rem(75px);
+    margin-right: 75px;
     position: relative;
     z-index: 99;
 }
 .logo__image {
-height: rem(100px);
-width: rem(100px)
+height: 100px;
+width: 100px
 
 }
 .navigation{    
     margin: 0 auto;
-    margin-right: rem(15px);
+    margin-right: 15px;
     @include tablets {
         display: none;
     }
@@ -93,7 +93,7 @@ width: rem(100px)
     display: flex;
     flex-direction: row;
     align-self: center;
-    padding-left: rem(16px);
+    padding-left: 16px;
     &:first-child {
         padding-left: 0;
     }
@@ -114,25 +114,25 @@ width: rem(100px)
     color: #ffffff;
     display: flex;
     font-family: 'ubunturegular';
-    font-size: rem(13px);
+    font-size: 13px;
     font-weight: 500;
     text-align: right;
-    line-height: rem(30px);
+    line-height: 30px;
     text-transform: uppercase;
     text-decoration: none;
     flex-direction: row;
     white-space: nowrap; 
-    margin-right: rem(16px);
+    margin-right: 16px;
 }
 
 .order__button {
 display: flex;
 justify-content: center;
 white-space: nowrap; 
-height: rem(35px);
-width: rem(97px);
+height: 35px;
+width: 97px;
 background-color: rgba(228, 80, 40, 1);
-border-radius: rem(5px);
+border-radius: 5px;
 border: 0;
 }
 .order__button:hover {
@@ -143,8 +143,8 @@ text-transform: uppercase;
 text-decoration: none;
 align-self: center;
 color: #ffffff;
-font-size: rem(13px);
-line-height: rem(30px);
+font-size: 13px;
+line-height: 30px;
 font-weight: 500;
 }
 
@@ -152,7 +152,7 @@ font-weight: 500;
 width: 50%;
 position: relative;
 display: inline-block;
-margin-right: rem(11px);
+margin-right: 11px;
 float: left;
 text-align: center;
 @include tablets {
@@ -163,7 +163,7 @@ width: 100%;
 }
 .burgers-desc {
     width: 50%;
-    padding-top: rem(80px);    
+    padding-top: 80px;    
     display: flex;
     flex-direction: column;
     justify-content: center;  
@@ -172,7 +172,7 @@ width: 100%;
 
         width: 100%;
         align-items: center;
-        padding-top: rem(80px);
+        padding-top: 80px;
 
           }      
           @include phones {
@@ -185,7 +185,7 @@ width: 100%;
 
 .burger__photo {
     display: block;
-    padding-left: rem(44px);
+    padding-left: 44px;
     @include tablets {
         max-width: 100%;
         height: auto;
@@ -199,7 +199,7 @@ width: 100%;
     right: 0;
     width: 100%;
     height: 100%;
-    top: rem(15px);
+    top: 15px;
     @include tablets {
         max-width: 100%;
         max-height: 100%;
@@ -210,32 +210,32 @@ width: 100%;
 
 .subtitle {
 flex: 0 1 ;
-padding-top: rem(12px);
-@include subtitle (rem(65px), 500, rem(60px), #ffffff, 0)
+padding-top: 12px;
+@include subtitle (65px, 500, 60px, #ffffff, 0)
 letter-spacing: -0.02em;
 @include tablets {
     text-align: center;
 }
 @include phones {
-    font-size: rem(48px);
+    font-size: 48px;
 }
 }
 .scrolldown {
 border: none;
 display: block; 
 left: 50%;
-width: rem(29px);
+width: 29px;
 cursor: pointer;
 position: absolute;
-bottom: rem(40px);
+bottom: 40px;
 @include phones {
     left: 45%;
 }
 }
 .fixed-menu {
 position: fixed;
-top: rem(95px);
-right: rem(53px);
+top: 95px;
+right: 53px;
 @include tablets {
     display: none;
 }
@@ -243,24 +243,24 @@ right: rem(53px);
 .fixed-menu__item {
     &.active {
         .fixed-menu__dot {
-            border: solid #fff rem(1px); 
+            border: solid #fff 1px; 
         }
     }
 }
 
 
 .fixed-menu__dot {
-    width: rem(16px);
-    height: rem(16px);
+    width: 16px;
+    height: 16px;
     border-radius: 50%;
     border: transparent;         
     background-color: transparent;
-    margin-bottom: rem(3px);
+    margin-bottom: 3px;
     position: relative;
 &:before {
     content: "";
-    width: rem(6px);
-    height: rem(6px);
+    width: 6px;
+    height: 6px;
     background: #fff;
     border-radius: 50%;
     position: absolute;
@@ -271,16 +271,16 @@ right: rem(53px);
     }
 }
 .fixed-menu__dot:hover {  
-    border: solid #fff rem(1px);
+    border: solid #fff 1px;
     cursor: pointer;
 }
 
 .header-menu-link {
     vertical-align: middle;
 	position: relative;
-	height: rem(22px);
+	height: 22px;
 	align-items: center;
-    margin-left: rem(30px);
+    margin-left: 30px;
     align-self: center;
     display: none;
     background: none;
@@ -296,9 +296,9 @@ right: rem(53px);
 .header-menu-link__bars {
     &, &:before, &:after {
         background: #fff;
-        width: rem(24px);
-        height: rem(5px);
-        border-radius: rem(3px);
+        width: 24px;
+        height: 5px;
+        border-radius: 3px;
     }
     &:before, &:after {
         content: "";
